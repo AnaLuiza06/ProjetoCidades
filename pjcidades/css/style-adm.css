@@ -1,0 +1,40 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+h2{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+svg{
+	margin-left: 120px;
+	margin-top: 50px;
+	color: #3475F4;
+}
+.card-form{
+	margin-bottom: 20px;
+}
+form{
+	width: 500px;
+	height: 530px;
+	border-radius: 20px;
+	border: 2px solid #3475F4;
+	overflow: auto;
+	padding: 30px;
+	margin: auto;
+	color: #3475F4;
+}
+.input-form input{
+	width: 440px;
+	height: 2em;
+	border-radius: 20px;
+	border: 1px solid #3475F4;
+	margin-top: 0px;
+	color: #3475F4;
+	padding: 0px 10px;
+}
+button{
+	margin: auto;
+}
