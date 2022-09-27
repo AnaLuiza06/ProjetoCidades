@@ -16,6 +16,20 @@
 	?>
 	<main>
 
+        <section>
+            <h1>Países</h1>
+            <div class="input-form">
+				<select>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+                    <option>5</option>
+				</select>
+                <input type="numer" name="populacao">
+			</div>
+        </section>
+
 		<section>
 			<div class="titulo-conteudos">
 				<h2>Países</h2>

@@ -10,20 +10,35 @@
 <body>
 
 	<main>
-		<a href="#">
+		<a href="./index.php">
 			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
 			  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
 			</svg>
 		</a>
-		<form>
-			<h2>Adicionar País</h2>
+		<form method="post" action="../../conexao/adiciona/add-pais.php">
+			<h2>Adicionar Estado</h2>
 			<div class="card-form">
 				<h4>Inicio</h4>
 				<div class="input-form">
-					<label>Região</label>
-					<input type="text" name="regiao">
+					<label>País</label>
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
 				</div>
-
+				<div class="input-form">
+					<label>Região</label>
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
 				<div class="input-form">
 					<label>Nome</label>
 					<input type="text" name="nome">
@@ -70,15 +85,10 @@
 					<label>Localização</label>
 					<input type="text" name="localizacao">
 				</div>
-				
+
 				<div class="input-form">
 					<label>Capital</label>
 					<input type="text" name="capital">
-				</div>
-
-				<div class="input-form">
-					<label>Mapa</label>
-					<input type="text" name="mapa">
 				</div>
 			</div>
 
@@ -145,7 +155,7 @@
 					<input type="text" name="imgCultura">
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary" style="background-color: #3475F4;">Enviar</button>
+			<button type="submit" class="btn btn-primary" style="background-color: #3475F4;">Enviar</button>
 		</form>
 	</main>
 

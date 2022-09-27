@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 }
-h2{
+form h2{
 	text-align: center;
 }
 a{
@@ -36,6 +36,47 @@ form{
 	color: #fff;
 	padding: 0px 10px;
 }
-button{
+.input-form select{
+	width: 440px;
+	height: 2em;
+	border-radius: 20px;
+	background-color: #1E1E1E;
+	border: 1px solid #fff;
+	margin-top: 0px;
+	color: #fff;
+	padding: 0px 10px;
+}
+form button{
+	margin: auto;
+}
+
+.container-paises{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+.cards-paises{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.btns-cards{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.btns-cards button{
+	width: 100px;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin: auto;
+}
+.titulo-conteudos{
+	text-align: center;
+	margin-top: 50px;
+}
+.titulo-conteudos button{
 	margin: auto;
 }
