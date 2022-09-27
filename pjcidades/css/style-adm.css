@@ -20,19 +20,20 @@ form{
 	width: 500px;
 	height: 530px;
 	border-radius: 20px;
-	border: 2px solid #3475F4;
+	background-color: #1E1E1E;
 	overflow: auto;
 	padding: 30px;
 	margin: auto;
-	color: #3475F4;
+	color: #fff;
 }
 .input-form input{
 	width: 440px;
 	height: 2em;
 	border-radius: 20px;
-	border: 1px solid #3475F4;
+	background-color: transparent;
+	border: 1px solid #fff;
 	margin-top: 0px;
-	color: #3475F4;
+	color: #fff;
 	padding: 0px 10px;
 }
 button{

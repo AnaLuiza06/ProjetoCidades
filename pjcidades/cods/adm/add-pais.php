@@ -15,7 +15,7 @@
 			  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
 			</svg>
 		</a>
-		<form>
+		<form method="post" action="../../conexao/adiciona/add-pais.php">
 			<h2>Adicionar País</h2>
 			<div class="card-form">
 				<h4>Inicio</h4>
@@ -74,26 +74,6 @@
 				<div class="input-form">
 					<label>Idioma</label>
 					<input type="text" name="idioma">
-				</div>
-
-				<div class="input-form">
-					<label>Tipo de Govero</label>
-					<input type="text" name="governo">
-				</div>
-
-				<div class="input-form">
-					<label>Divisão Federal</label>
-					<input type="text" name="divisaofederal">
-				</div>
-
-				<div class="input-form">
-					<label>Moeda</label>
-					<input type="text" name="moeda">
-				</div>
-
-				<div class="input-form">
-					<label>Mapa</label>
-					<input type="text" name="mapa">
 				</div>
 			</div>
 
@@ -160,7 +140,7 @@
 					<input type="text" name="imgCultura">
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary" style="background-color: #3475F4;">Enviar</button>
+			<button type="submit" class="btn btn-primary" style="background-color: #3475F4;">Enviar</button>
 		</form>
 	</main>
 

@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap');
+
 *{
 	padding: 0;
 	margin: 0;
-}
-section{
-	margin-bottom: 60px;
-}
-h2{
-	text-align: center;
-	margin-bottom: 15px;
+	font-family: 'Poppins', sans-serif;
 }
 
+h1{
+	font-size: 60px;
+}
+p{
+	font-family: 'Roboto', sans-serif;
+}
 
 header{
 	width: 100%;
@@ -18,9 +20,10 @@ header{
 	align-items: center;
 	position: fixed;
 	height: 50px;
-	background-color: #fff;
+	background-color: #1E1E1E;
 	padding: 0px 120px;
-	box-shadow: 0px 10px 15px rgba(0,0,0,0.5)
+	box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+	z-index: 4;
 }
 .logo{
 	display: flex;
@@ -49,6 +52,352 @@ li{
 }
 
 #inicio{
+	width: 100%;
+	height: 95vh;
+	position: relative;
+	top: 0;
+}
+.container-inicio{
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(0deg, #1E1E1E 5%, transparent 70%);
+}
+.text-inicio{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.img-inicio{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+}
+
+#regioes{
+	width: 100%;
+	background-color: #1E1E1E;
+	position: relative;
+}
+.carrossel-regioes{
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-260px, -60px);
+	z-index: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btns-carrossel{
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.btn-carrossel{
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	background-color: transparent;
+}
+.container-carrossel{
+	width: 60%;
+	display: flex;
+	gap: 30px;
+}
+.container-carrossel a{
+	display: none;
+}
+.container-carrossel a.active{
+	display: block;
+}
+.container-carrossel img{
+	width: 200px;
+	height: 120px;
+}
+.text-regioes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.numeros{
+	width: 500px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	padding: 20px;
+	margin-bottom: 70px;
+	margin-top: 90px;
+}
+.informacoes{
+	width: 500px;
+	padding: 20px;
+	margin-bottom: 70px;
+	margin-top: 90px;
+	border-left: 1px solid #fff;
+}
+
+#historia{
+	width: 100%;
+	position: relative;
+}
+.img-historia{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	position: absolute;
+	top: 0;
+	transform: translate(0px, -70px);
+}
+.img-historia img{
+	width: 550px;
+	height: 950px;
+}
+.img-historia div{
+	width: 550px;
+	height: 110%;
+}
+.container-historia{
+	width: 100%;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.container-historia div{
+	width: 550px;
+}
+
+#bandeira{
+	width: 100%;
+	position: relative;
+	margin-top: 50px;
+}
+.container-bandeira{
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.container-bandeira div{
+	width: 550px;
+}
+.img-bandeira{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+.img-bandeira img{
+	width: 550px;
+	height: 450px;
+}
+.img-bandeira div{
+	width: 550px;
+}
+
+#geografia{
+	width: 100%;
+	position: relative;
+}
+.img-geografia img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -2;
+}
+.container-geografia{
+	width: 100%;
+	padding: 100px;
+	background-image: linear-gradient(0deg, #1E1E1E 50%, transparent 130%);
+}
+.cards-geografia{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+.cards-geografia div{
+	width: 400px;
+	padding: 20px;
+	color: #fff;
+	text-align: center;
+}
+.border{
+	border-right: 1px solid #fff;
+}
+
+#economia{
+	width: 100%;
+	position: relative;
+	margin-top: 30px;
+}
+.container-economia{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.container-economia div{
+	width: 550px;
+	color: #1E1E1E;
+}
+.img-economia{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	position: absolute;
+	top: 0;
+	transform: translate(0px, -70px);
+}
+.img-economia img{
+	width: 550px;
+	height: 470px;
+}
+.img-economia div{
+	width: 550px;
+}
+
+#cultura{
+	width: 100%;
+	position: relative;
+	margin-top: 50px;
+}
+.container-cultura{
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.container-cultura div{
+	width: 550px;
+}
+.img-cultura{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+.img-cultura img{
+	width: 550px;
+	height: 450px;
+}
+.img-cultura div{
+	width: 550px;
+}
+
+#turismo{
+	width: 100%;
+	position: relative;
+}
+.img-turismo img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -3;
+}
+.container-turismo{
+	width: 100%;
+	padding: 100px;
+	background-image: linear-gradient(0deg, #1E1E1E 70%, transparent 130%);
+}
+.cards-turismo{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+.cards-turismo a{
+	width: 360px;
+	height: 450px;
+	color: #fff;
+	display: none;
+}
+.cards-turismo a.active{
+	display: block;
+}
+.cards-turismo img{
+	width: 100%;
+	height: 200px;
+}
+
+#comentarios{
+	width: 100%;
+	margin-top: 40px;
+}
+.container-comentarios{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+.card-comentarios{
+	width: 350px;
+	padding: 20px;
+	background-color: #1E1E1E;
+}
+.identifiacacao{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.identifiacacao img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.text-comentario{
+	width: 310px;
+}
+
+footer{
+	width: 100%;
+	height: 250px;
+	position: relative;
+	margin-top: 30px;
+}
+footer div{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(0deg, #1E1E1E 60%, transparent 130%);
+}
+footer img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -2;
+}
+/*#inicio{
 	width: 100%;
 	height: 95vh;
 	display: flex;
@@ -139,7 +488,7 @@ footer{
 	text-align: center;
 	margin-bottom: 10px;
 }
-.text-geografia{
+.text-turismo{
 	width: 350px;
 }
 
@@ -194,4 +543,4 @@ footer{
 }
 .btns-cards a{
 	color: #fff;
-}
+}*/
