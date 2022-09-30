@@ -21,7 +21,7 @@ header{
 	position: fixed;
 	height: 50px;
 	background-color: #1E1E1E;
-	padding: 0px 120px;
+	padding: 0px 50px;
 	box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
 	z-index: 4;
 }
@@ -45,7 +45,7 @@ ul{
 	display: flex;
 	text-align: center;
 	justify-content: center;
-	gap: 50px;
+	gap: 30px;
 }
 li{
 	list-style: none;
