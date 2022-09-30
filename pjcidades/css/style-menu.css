@@ -1,16 +1,17 @@
 *{
 	margin: 0;
 	padding: 0;
-	width: 100%;
 }
 
 header{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background-color: rgba(30, 30, 30, 0.70);
 	display: flex;
 	justify-content: space-between;
 	padding: 0px 50px;
+	position: fixed;
+	z-index: 3;
 }
 .logo{
 	display: flex;
@@ -34,11 +35,138 @@ ul{
 	height: 40px;
 	border-radius: 50%;
 }
-
-.numeros{
+.home-adm{
 	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(0deg, #1E1E1E 5%, transparent 70%);
+	position: relative;
+}
+.home-adm img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+}
+.numeros{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: red;
+	background-color: #1E1E1E;
+	color: #fff;
+}
+.numeros div{
+	width: 200px;
+	border: 1px solid blue;
+	text-align: center;
+}
+.pesquisar{
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.pesquisar h1{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+.pesquisar form{
+	margin: auto;
+}
+.pesquisar form div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	margin-top: 70px;
+	margin-bottom: 20px;
+}
+.pesquisar form select{
+	width: 150px;
+	height: 2em;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.pesquisar form input{
+	width: 450px;
+	height: 2em;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+form button{
+	margin: auto;
+}
+
+
+.inicio{
+	width: 100%;
+	height: 60vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.inicio div{
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+}
+.inicio button{
+	margin: auto;
+}
+.inicio img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+
+table{
+	width: 100%;
+	margin-top: 30px;
+}
+tr{
+	margin-top: 5px;
+}
+
+.card{
+	margin-top: 40px;
+	z-index: 1;
+}
+.btns-cards{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.btns-cards button{
+	width: 100px;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin: auto;
+}
+.titulo-conteudos{
+	text-align: center;
+	margin-top: 50px;
+}
+.titulo-conteudos button{
+	margin: auto;
+}
+
+.main-forms{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

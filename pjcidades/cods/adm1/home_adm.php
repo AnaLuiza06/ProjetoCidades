@@ -9,32 +9,30 @@
 </head>
 <body>
 
-	<header>
-		<div class="logo">
-			<div>< ></div>
-			<h3>Hello<span>World</span></h3>
-		</div>
-		<ul>
-			<li><a href="#">Administradores</a></li>
-			<li><a href="#">Países</a></li>
-			<li><a href="#">Regiões</a></li>
-	        <li><a href="#">Estados</a></li>
-			<li><a href="#">Cidades</a></li>
-	        <li><a href="#">Pontos Turísticos</a></li>
-			<li><a href="#">Comentários</a></li>
-		</ul>
-	    <div class="indentificacao-menu">
-			<h4>Nome</h4>
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyvlvaML_n_oGqe5_iJVeq09gI6kIjRYFiqE_-Y_L2yZePdt80H19ITptEe1xO8jTlv80&usqp=CAU">
-		</div>
-	</header>
+	<?php
+		include ("./menu.php");
+	?>
 
-	<main>
-		<section class="inicio">
-			
+	<main class="home-adm">
+		<img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-fundo">
+
+		<section class="pesquisar">
+			<h1>Tenha acesso a todos os cunteúdos do HelloWorld</h1>
+			<form>
+				<div>
+					<select>
+						<option value="pais">País</option>
+						<option value="regiao">Região</option>
+						<option value="estado">Estado</option>
+						<option value="cidade">Cidade</option>
+						<option value="">Ponto Turístico</option>
+					</select>
+					<input type="test" name="perquisar">
+				</div>
+				<button type="submit">Pesquisar</button>
+			</form>
 		</section>
 
-		<img src="">
 		<section class="numeros">
 			<div>
 				<h1>00</h1>
