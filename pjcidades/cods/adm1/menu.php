@@ -4,12 +4,14 @@
 			<h3>Hello<span>World</span></h3>
 		</div>
 		<ul>
-			<li><a href="lista-administradores.php">Administradores</a></li>
-			<li><a href="lista-paises.php">Países</a></li>
-			<li><a href="lista-regioes.php">Regiões</a></li>
-	        <li><a href="lista-estados.php">Estados</a></li>
-			<li><a href="lista-cidades.php">Cidades</a></li>
-	        <li><a href="lista-pturisticos.php">Pontos Turísticos</a></li>
+			<li><a href="home_adm.php">Home</a></li>
+			<li><a href="pages-menu/lista-administradores.php">Administradores</a></li>
+			<li><a href="pages-menu/lista-paises.php">Países</a></li>
+			<li><a href="pages-menu/lista-regioes.php">Regiões</a></li>
+	        <li><a href="pages-menu/lista-estados.php">Estados</a></li>
+			<li><a href="pages-menu/lista-cidades.php">Cidades</a></li>
+			<li><a href="pages-menu/lista-distritos.php">Distrito</a></li>
+	        <li><a href="pages-menu/lista-pturisticos.php">Pontos Turísticos</a></li>
 		</ul>
 	    <div class="indentificacao-menu">
 			<h4>Nome</h4>

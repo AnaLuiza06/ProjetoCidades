@@ -16,7 +16,7 @@
 		<section id="inicio">
 			<div class="container-inicio">
 				<div class="text-inicio">
-					<h1>Brasil</h1>
+					<h1>Sudeste</h1>
 				</div>
 			</div>
 

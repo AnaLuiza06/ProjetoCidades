@@ -6,55 +6,43 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+header{
+	width: 100%;
+	height: 60px;
+	background-color: rgba(30, 30, 30, 0.70);
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 50px;
+	position: fixed;
+	z-index: 3;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
 h1{
-	font-size: 60px;
+	font-size: 40px;
 }
 p{
 	font-family: 'Roboto', sans-serif;
 }
 
-header{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: fixed;
-	height: 50px;
-	background-color: #1E1E1E;
-	padding: 0px 50px;
-	box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
-	z-index: 4;
-}
-.logo{
-	display: flex;
-	align-items: center;
-}
-.logo div{
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	color: #fff;
-	background-color: blue;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 24px;
-}
-
-ul{
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	gap: 30px;
-}
-li{
-	list-style: none;
-}
-
 #inicio{
 	width: 100%;
-	height: 95vh;
+	height: 70vh;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	top: 0;
 }
 .container-inicio{
@@ -78,7 +66,86 @@ li{
 	left: 0;
 	z-index: -2;
 }
+ section h2{
+	 text-align: center;
+ }
+#apresentacao{
+	width: 100%;
+	background-color: #1E1E1E;
+	color: #fff;
+	padding: 40px 0px;
+	position: relative;
+}
+.container-apresentacao{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+.container-apresentacao.active{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(0px, 90px);
+}
+.text-apresentacao{
+	width: 550px;
+}
+.img-apresentacao{
+	width: 550px;
+}
+.img-apresentacao img{
+	width: 550px;
+	height: 400px;
+}
 
+.container-carrosel{
+	margin-top: 120px;
+}
+.container-paises{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+.cards-paises{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.card{
+	width: 370px;
+	margin-top: 0px;
+}
+
+#turismo{
+	margin-top: 60px;
+}
+.footer{
+	width: 100%;
+	position: relative;
+	margin-top: 60px;
+}
+.numer{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	margin-bottom: 0px;
+}
+footer{
+	background-color: black;
+}
+.footer img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -2;
+}
 #regioes{
 	width: 100%;
 	background-color: #1E1E1E;

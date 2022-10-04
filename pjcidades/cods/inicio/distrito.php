@@ -16,7 +16,7 @@
 		<section id="inicio">
 			<div class="container-inicio">
 				<div class="text-inicio">
-					<h1>Rio de Janeiro</h1>
+					<h1>Distrito</h1>
 				</div>
 			</div>
 
@@ -24,33 +24,6 @@
 		</section>
 		
 		<section id="regioes">
-			<div class="carrossel-regioes">
-				<div class="btns-carrossel">
-					<button class="btn-carrossel"><</button>
-					<button class="btn-carrossel">></button>
-				</div>
-				<div class="container-carrossel">
-					<a href="#" class="active">
-						<img src="https://static.todamateria.com.br/upload/54/17/541775e12aac4-mata-das-araucarias.jpg?auto_optimize=low">
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://magazine.zarpo.com.br/wp-content/uploads/2019/01/rio-de-janeiro_zarpo-1.jpg">
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://s3.static.brasilescola.uol.com.br/img/2014/08/pantanal-brasileiro.jpg">
-					</a>
-
-					<a href="#">
-						<img src="https://st4.depositphotos.com/1485837/22688/i/600/depositphotos_226887570-stock-photo-landscape-of-the-caatinga-in.jpg">
-					</a>
-
-					<a href="#">
-						<img src="https://s5.static.brasilescola.uol.com.br/be/2020/05/floresta-amazonica.jpg">
-					</a>
-				</div>
-			</div>
 
 			<div class="text-regioes">
 				<div class="numeros">
@@ -58,9 +31,6 @@
 					</div>
 					<div class="informacoes">
 						<p>Nome Oficioal: República Federativa do Brasil</p>
-						<p>Gentilico: Brasileiro</p>
-						<p>Localização: América do Sul</p>
-						<p>Capital: Brasília</p>
 						<p>Número de Habitantes: </p>
 						<p>Área Territorial: </p>
 						<p>PIB: </p>

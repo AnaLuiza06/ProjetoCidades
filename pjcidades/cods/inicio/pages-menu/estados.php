@@ -18,7 +18,6 @@
         <section class="inicio">
             <div>
                 <h1>Estados</h1>
-                <button><a href="../forms-add/add-estado.php">Adiciona</a></button>
             </div>
             <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-fundo">
         </section>
@@ -32,14 +31,7 @@
                             <h5>Nome Estado</h5>
                             <h6>País</h6>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../estado.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -51,14 +43,7 @@
                             <h5>Nome Estado</h5>
                             <h6>País</h6>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../estado.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -70,14 +55,7 @@
                             <h5>Nome Estado</h5>
                             <h6>País</h6>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../estado.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -89,14 +67,7 @@
                             <h5>Nome Estado</h5>
                             <h6>País</h6>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../estado.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -108,14 +79,7 @@
                             <h5>Nome Estado</h5>
                             <h6>País</h6>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../estado.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -127,14 +91,7 @@
                             <h5>Nome Estado</h5>
                             <h6>País</h6>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../estado.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>

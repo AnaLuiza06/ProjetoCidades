@@ -10,7 +10,7 @@
 <body>
 
 	<?php
-		include ("../menu.php");
+		include ("./menu.php");
 	?>
 
 	<main class="page-adm">

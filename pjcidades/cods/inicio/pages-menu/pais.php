@@ -18,7 +18,6 @@
         <section class="inicio">
             <div>
                 <h1>Paises</h1>
-                <button><a href="../forms-add/add-pais.php">Adicionar</a></button>
             </div>
             <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-fundo">
         </section>
@@ -31,14 +30,7 @@
                         <div class="card-body">
                             <h5>Nome País</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../pais.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -49,14 +41,7 @@
                         <div class="card-body">
                             <h5>Nome País</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../pais.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -67,14 +52,7 @@
                         <div class="card-body">
                             <h5>Nome País</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../pais.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>
@@ -85,14 +63,7 @@
                         <div class="card-body">
                             <h5>Nome País</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
+                            <button><a href="../pais.php">Saber Mais</a></button>
                         </div>
                     </div>
                 </div>

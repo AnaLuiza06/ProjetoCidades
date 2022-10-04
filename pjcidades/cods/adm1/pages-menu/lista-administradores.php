@@ -10,7 +10,7 @@
 <body>
 
 	<?php
-		include ("../menu.php");
+		include ("./menu.php");
 	?>
 
 	<main class="page-adm">
@@ -18,7 +18,7 @@
         <section class="inicio">
             <div>
                 <h1>Administradores</h1>
-                <button>Adicionar</button>
+                <button><a href="../forms-add/add-adm.php">Adicionar</a></button>
             </div>
             <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-fundo">
         </section>
