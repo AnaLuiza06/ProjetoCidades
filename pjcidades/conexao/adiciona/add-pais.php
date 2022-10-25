@@ -46,4 +46,5 @@
 			VALUES ('$nome','$img_inicio','$nome_oficial','$gentilico','$populacao','$localizacao','$capital','$idioma','$area','$pib','$idh','$text_historia','$img_historia','$text_bandeira','$img_bandeira','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
 		print_r($sql);
 		$incluir = mysqli_query($cn, $sql);
+		header('Location: ../../adm1/forms-add/add-pais.php');
 	}

@@ -14,7 +14,7 @@
 		include ("./menu.php");
 	?>
 	<main class="main-forms">
-		<form>
+		<form method="post" action="../../../conexao/adiciona/add-pais.php">
 			<h2>Adicionar País</h2>
 			<div class="card-form">
 				<h4>Inicio</h4>
