@@ -40,16 +40,16 @@
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
+                            <img class="card-img-top" src="<?php echo $exibe_regiao[$i]['imagem_inicio'];?>" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <h5><?php echo $exibe_regiao[$i]['nome'];?></h5>
                                 <h6><?php echo $exibe_pais[0]['nome'];?></h6>
                                 <div class="btns-cards">
                                     <button>
-                                        <a href="#">Alterar</a>
+                                        <a href="../forms-update/up-regiao.php?id=<?php echo $exibe_regiao[$i]['id'];?>">Alterar</a>
                                     </button>
                                     <button>
-                                        <a href="#">Deletar</a>
+                                        <a href="../../../conexao/deleta/del-regaio.php?id=<?php echo $exibe_regiao[$i]['id'];?>">Deletar</a>
                                     </button>
                                 </div>
                             </div>

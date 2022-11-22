@@ -41,7 +41,7 @@
                             <div class="card-body">
                                 <h5><?php echo $exibe_pais[$i]['nome']?></h5>
                                 <p class="card-text">Nome Oficial: <?php echo $exibe_pais[$i]['nome_oficial']?></p>
-                                <p class="card-text">Nome Oficial: <?php echo $exibe_pais[$i]['localizacao']?></p>
+                                <p class="card-text">Localização: <?php echo $exibe_pais[$i]['localizacao']?></p>
                                 <div class="btns-cards">
                                     <button>
                                         <a href="#">Alterar</a>
