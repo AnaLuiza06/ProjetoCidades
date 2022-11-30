@@ -11,6 +11,10 @@
 
 	<?php
 		include ("./menu.php");
+        include ("./conexao.php");
+
+        $consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade`");
+	 	$exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
 	?>
 
 	<main class="page-adm">
@@ -25,119 +29,35 @@
 
         <section class="container">
 			<div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Cidade</h5>
-                            <h6>País</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Cidade</h5>
-                            <h6>País</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    for($i=0; $i<count($exibe_cidade); $i++){
+                        $id_pais = $exibe_cidade[$i]['id_pais'];
+                        $consulta_pais = mysqli_query($cn, "SELECT * FROM `pais` WHERE `id` = '$id_pais'");
+                        $exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
+                ?>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Cidade</h5>
-                            <h6>País</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="<?php echo$exibe_cidade[$i]['imagem_inicio'];?>" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <h5><?php echo$exibe_cidade[$i]['nome'];?></h5>
+                                <h6><?php echo $exibe_pais[0]['nome'];?></h6>
+                                <div class="btns-cards">
+                                    <button>
+                                        <a href="../forms-update/up-cidade.php?id=<?php echo$exibe_cidade[$i]['id'];?>">Alterar</a>
+                                    </button>
+                                    <button>
+                                        <a href="../../../conexao/deleta/del-cidade.php?id=<?php echo$exibe_cidade[$i]['id'];?>">Deletar</a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Cidade</h5>
-                            <h6>País</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Cidade</h5>
-                            <h6>País</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Cidade</h5>
-                            <h6>País</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </section>
 

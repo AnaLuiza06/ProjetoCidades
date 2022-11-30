@@ -48,7 +48,7 @@
                                         <a href="../forms-update/up-estado.php?id=<?php echo $exibe_estado[$i]['id'];?>">Alterar</a>
                                     </button>
                                     <button>
-                                        <a href="../../../conexao/deleta/del-regaio.php?id=<?php echo $exibe_estado[$i]['id'];?>">Deletar</a>
+                                        <a href="../../../conexao/deleta/del-estado.php?id=<?php echo $exibe_estado[$i]['id'];?>">Deletar</a>
                                     </button>
                                 </div>
                             </div>
