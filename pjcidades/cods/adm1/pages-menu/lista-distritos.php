@@ -11,6 +11,10 @@
 
 	<?php
 		include ("./menu.php");
+        include ("./conexao.php");
+
+        $consulta_distrito = mysqli_query($cn, "SELECT * FROM `distrito`");
+	 	$exibe_distrito = mysqli_fetch_all($consulta_distrito, MYSQLI_ASSOC);
 	?>
 
 	<main class="page-adm">
@@ -25,119 +29,32 @@
 
         <section class="container">
 			<div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Distrito</h5>
-                            <h6>Cidade</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
+                <?php
+                    for($i=0; $i<count($exibe_distrito); $i++){
+                        $id_cidade = $exibe_distrito[$i]['id_cidade'];
+                        $consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade` WHERE `id` = '$id_cidade'");
+                        $exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
+                ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="<?php echo $exibe_distrito[0]['imagem_inicio'];?>" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <h5><?php echo $exibe_distrito[$i]['nome'];?></h5>
+                                <h6><?php echo $exibe_cidade[0]['nome'];?></h6>
+                                <div class="btns-cards">
+                                    <button>
+                                        <a href="../forms-update/up-distrito.php?id=<?php echo $exibe_distrito[$i]['id'];?>">Alterar</a>
+                                    </button>
+                                    <button>
+                                        <a href="#">Deletar</a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Distrito</h5>
-                            <h6>Cidade</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Distrito</h5>
-                            <h6>Cidade</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Distrito</h5>
-                            <h6>Cidade</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Distrito</h5>
-                            <h6>Cidade</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5>Nome Distrito</h5>
-                            <h6>Cidade</h6>
-                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                            <div class="btns-cards">
-                                <button>
-                                    <a href="#">Alterar</a>
-                                </button>
-                                <button>
-                                    <a href="#">Deletar</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </section>
 

@@ -50,5 +50,5 @@
         '$text_historia','$img_historia', '$text_bandeira','$img_bandeira','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
 		$incluir = mysqli_query($cn, $sql);
 
-		 header("Location: ../../cods/adm1/forms-add/add-estado.php");
+		 header("Location: ../../cods/adm1/forms-add/add-cidade.php");
 	}
