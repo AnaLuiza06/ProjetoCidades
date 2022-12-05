@@ -4,6 +4,7 @@
 
 	$nome = $_POST['nome'];
 	$img_inicio = $_POST['imgInicio'];
+	$descricao = $_POST['descricao'];
 
 	$populacao = $_POST['populacao'];
 	$area = $_POST['area'];
@@ -14,6 +15,9 @@
 	$localizacao = $_POST['localizacao'];
 	$capital = $_POST['capital'];
 	$idioma = $_POST['idioma'];
+	$governo = $_POST['governo'];
+	$estados = $_POST['estados'];
+	$moeda = $_POST['moeda'];
 
 	$text_historia = $_POST['textHistoria'];
 	$img_historia = $_POST['imgHistoria'];
@@ -42,9 +46,7 @@
 	} else{
 		// echo "Usuário NÃO cadastrado";
 
-		$sql = "INSERT INTO `pais`(`nome`, `imagem_inicio`, `nome_oficial`, `gentilico`, `populacao`, `localizacao`, `capital`, `idioma`, `area`, `pib`, `idh`, `text_historia`, `imagem_historia`, `text_bandeira`, `imagem_bandeira`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, `text_vegetacao`, `text_relevo`) 
-			VALUES ('$nome','$img_inicio','$nome_oficial','$gentilico','$populacao','$localizacao','$capital','$idioma','$area','$pib','$idh','$text_historia','$img_historia','$text_bandeira','$img_bandeira','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
-		print_r($sql);
+		$sql = "INSERT INTO `pais`(`nome`, `imagem_inicio`, `descricao`, `nome_oficial`, `gentilico`, `governo`, `estados`, `populacao`, `localizacao`, `capital`, `idioma`, `area`, `pib`, `idh`, `moeda`, `text_historia`, `imagem_historia`, `text_bandeira`, `imagem_bandeira`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, `text_vegetacao`, `text_relevo`) VALUES ('$nome','$img_inicio','$descricao','$nome_oficial','$gentilico','$governo','$estados','$populacao','$localizacao','$capital','$idioma','$area','pib','$idh','$moeda','$text_historia','$img_historia','$text_bandeira','$img_bandeira','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
 		$incluir = mysqli_query($cn, $sql);
-		header('Location: ../../adm1/forms-add/add-pais.php');
+		header('Location: ../../cods/adm1/forms-add/add-pais.php');
 	}

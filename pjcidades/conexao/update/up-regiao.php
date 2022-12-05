@@ -6,12 +6,13 @@
 	$nome = $_POST['nome'];
 	$img_inicio = $_POST['imgInicio'];
     $pais = $_POST['pais'];
+    $descricao = $_POST['descricao'];
 
+    $estados = $_POST['estados'];
 	$populacao = $_POST['populacao'];
 	$area = $_POST['area'];
 	$pib = $_POST['pib'];
 	$idh = $_POST['idh'];
-	$nome_oficial = $_POST['nmeoficial'];
 	$localizacao = $_POST['localizacao'];
 
 	$text_historia = $_POST['textHistoria'];
@@ -37,7 +38,7 @@
 		//echo "usuário já cadastrado";
 
         $incluir = mysqli_query($cn, "UPDATE `regiao` SET `id_pais`='$pais',`nome`='$nome',
-        `imagem_inicio`='$img_inicio',`nome_oficial`='$nome_oficial',`populacao`='$populacao',`localizacao`='$localizacao',`area`='$area',
+        `imagem_inicio`='$img_inicio',`descricao`='$descricao',`estados`='$estados',`populacao`='$populacao',`localizacao`='$localizacao',`area`='$area',
         `pib`='$pib',`idh`='$idh',`text_historia`='$text_historia',`imagem_historia`='$img_historia',`text_economia`='$text_economia',
         `imagem_economia`='$img_economia',`text_cultura`='$text_cultura',`imagem_cultura`='$img_cultura',`text_clima`='$clima',
         `text_vegetacao`='$vegetacao',`text_relevo`='$relevo' WHERE `id` = '$id'");

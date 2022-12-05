@@ -6,6 +6,7 @@
 	$img_inicio = $_POST['imgInicio'];
     $pais = $_POST['pais'];
     $cidade = $_POST['cidade'];
+    $descricao = $_POST['descricao'];
 
 	$populacao = $_POST['populacao'];
 	$area = $_POST['area'];
@@ -41,9 +42,7 @@
 	} else{
 		// echo "Usuário NÃO cadastrado";
 
-		$sql = "INSERT INTO `distrito`(`id_pais`, `id_cidade`, `nome`, `imagem_inicio`, `nome_oficial`, `gentilico`, `populacao`, `localizacao`, 
-        `area`, `pib`, `idh`, `text_historia`, `imagem_historia`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, 
-        `text_vegetacao`, `text_relevo`) VALUES ('$pais','$cidade','$nome','$img_inicio','$nome_oficial','$gentilico','$populacao','$localizacao','$area',
+		$sql = "INSERT INTO `distrito`(`id_pais`, `id_cidade`, `nome`, `imagem_inicio`, `descricao`, `populacao`, `localizacao`, `area`, `pib`, `idh`, `text_historia`, `imagem_historia`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, `text_vegetacao`, `text_relevo`) VALUES ('$pais','$cidade','$nome','$img_inicio','$descricao','$populacao','$localizacao','$area',
         '$pib','$idh','$text_historia','$img_historia','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
 		$incluir = mysqli_query($cn, $sql);
 

@@ -37,7 +37,7 @@ p{
 
 #inicio{
 	width: 100%;
-	height: 70vh;
+	height: 85vh;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -48,7 +48,7 @@ p{
 .container-inicio{
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(0deg, #1E1E1E 5%, transparent 70%);
+	background-image: linear-gradient(0deg, #1E1E1E 5%, transparent 80%);
 }
 .text-inicio{
 	width: 100%;
@@ -112,11 +112,7 @@ p{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
-}
-.card{
-	width: 370px;
-	margin-top: 0px;
+	gap: 40px;
 }
 
 #turismo{
@@ -155,7 +151,7 @@ footer{
 	position: absolute;
 	top: 0;
 	right: 0;
-	transform: translate(-260px, -60px);
+	transform: translate(0px, -60px);
 	z-index: 2px;
 	display: flex;
 	justify-content: center;
@@ -185,6 +181,9 @@ footer{
 }
 .container-carrossel a{
 	display: none;
+	width: 200px;
+	height: 120px;
+	position: relative;
 }
 .container-carrossel a.active{
 	display: block;
@@ -192,6 +191,16 @@ footer{
 .container-carrossel img{
 	width: 200px;
 	height: 120px;
+}
+.container-carrossel div{
+	position: absolute;
+	width: 200px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	color: #fff;
 }
 .text-regioes{
 	display: flex;
@@ -218,66 +227,47 @@ footer{
 
 #historia{
 	width: 100%;
-	position: relative;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.text-historia{
+	width: 560px;
+	margin-top: 30px;
 }
 .img-historia{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 40px;
-	position: absolute;
-	top: 0;
-	transform: translate(0px, -70px);
+	position: relative;
+	width: 560px;
 }
 .img-historia img{
-	width: 550px;
-	height: 950px;
-}
-.img-historia div{
-	width: 550px;
-	height: 110%;
-}
-.container-historia{
 	width: 100%;
-	margin-top: 30px;
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-}
-.container-historia div{
-	width: 550px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transform: translate(0px, -30px);
 }
 
 #bandeira{
 	width: 100%;
-	position: relative;
 	margin-top: 50px;
-}
-.container-bandeira{
 	display: flex;
 	justify-content: center;
 	gap: 40px;
 }
-.container-bandeira div{
-	width: 550px;
+.text-bandeira{
+	width: 560px;
 }
 .img-bandeira{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-	align-items: center;
-	position: absolute;
-	top: 0;
-	z-index: 2;
+	position: relative;
+	width: 560px;
 }
 .img-bandeira img{
-	width: 550px;
-	height: 450px;
-}
-.img-bandeira div{
-	width: 550px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	transform: translate(0px, 30px);
+	z-index: 2;
 }
 
 #geografia{
@@ -296,6 +286,9 @@ footer{
 	padding: 100px;
 	background-image: linear-gradient(0deg, #1E1E1E 50%, transparent 130%);
 }
+.container-geografia h2{
+	color: #fff;
+}
 .cards-geografia{
 	width: 100%;
 	display: flex;
@@ -308,71 +301,49 @@ footer{
 	color: #fff;
 	text-align: center;
 }
-.border{
-	border-right: 1px solid #fff;
-}
 
 #economia{
 	width: 100%;
-	position: relative;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.text-economia{
+	width: 560px;
 	margin-top: 30px;
 }
-.container-economia{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-}
-.container-economia div{
-	width: 550px;
-	color: #1E1E1E;
-}
 .img-economia{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-	position: absolute;
-	top: 0;
-	transform: translate(0px, -70px);
+	position: relative;
+	width: 560px;
 }
 .img-economia img{
-	width: 550px;
-	height: 470px;
-}
-.img-economia div{
-	width: 550px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transform: translate(0px, -30px);
 }
 
 #cultura{
 	width: 100%;
-	position: relative;
 	margin-top: 50px;
-}
-.container-cultura{
 	display: flex;
 	justify-content: center;
 	gap: 40px;
 }
-.container-cultura div{
-	width: 550px;
+.text-cultura{
+	width: 560px;
 }
 .img-cultura{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-	align-items: center;
-	position: absolute;
-	top: 0;
-	z-index: 2;
+	position: relative;
+	width: 560px;
 }
 .img-cultura img{
-	width: 550px;
-	height: 450px;
-}
-.img-cultura div{
-	width: 550px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	transform: translate(0px, 30px);
 }
 
 #turismo{
@@ -387,9 +358,13 @@ footer{
 	z-index: -3;
 }
 .container-turismo{
+	z-index: -2
 	width: 100%;
 	padding: 100px;
 	background-image: linear-gradient(0deg, #1E1E1E 70%, transparent 130%);
+}
+.container-turismo h2{
+	color: #fff;
 }
 .cards-turismo{
 	width: 100%;
@@ -398,6 +373,7 @@ footer{
 	gap: 30px;
 }
 .cards-turismo a{
+	position: relative;
 	width: 360px;
 	height: 450px;
 	color: #fff;
@@ -407,8 +383,22 @@ footer{
 	display: block;
 }
 .cards-turismo img{
+	position: absolute;
 	width: 100%;
-	height: 200px;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+}
+.card-turismo{
+	width: 100%;
+	height: 100%;
+	background: red;
+	z-index: 2;
+}
+.text-turismo{
+	position: absolute;
+	bottom: 0;
+	z-index: 3;
 }
 
 #comentarios{
@@ -445,7 +435,6 @@ footer{
 	width: 100%;
 	height: 250px;
 	position: relative;
-	margin-top: 30px;
 }
 footer div{
 	position: absolute;

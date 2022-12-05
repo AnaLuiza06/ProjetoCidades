@@ -15,7 +15,7 @@
 		include ("./menu.php");
 	?>
 	<main class="main-forms">
-		<form>
+		<form method="post" action="../../../conexao/adiciona/add-adm.php">
 			<h2>Adicionar Administrador</h2>
 			<div class="card-form">
 				<div class="input-form">

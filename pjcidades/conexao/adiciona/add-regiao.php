@@ -5,7 +5,9 @@
 	$nome = $_POST['nome'];
 	$img_inicio = $_POST['imgInicio'];
     $pais = $_POST['pais'];
+    $descricao = $_POST['descricao'];
 
+    $estados = $_POST['estados'];
 	$populacao = $_POST['populacao'];
 	$area = $_POST['area'];
 	$pib = $_POST['pib'];
@@ -36,11 +38,8 @@
 	} else{
 		// echo "Usuário NÃO cadastrado";
 
-		$sql = "INSERT INTO `regiao`(`id_pais`, `nome`, `imagem_inicio`, `nome_oficial`, `populacao`, `localizacao`, `area`, `pib`, 
-		`idh`, `text_historia`, `imagem_historia`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, 
-		`text_vegetacao`, `text_relevo`) VALUES ('$pais','$nome','$img_inicio','$nome_oficial','$populacao','$localizacao','$area','$pib','$idh',
+		$sql = "INSERT INTO `regiao`(`id_pais`, `nome`, `imagem_inicio`, `descricao`, `estados`, `populacao`, `localizacao`, `area`, `pib`, `idh`, `text_historia`, `imagem_historia`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, `text_vegetacao`, `text_relevo`) VALUES ('$pais','$nome','$img_inicio', '$descricao', '$estados','$populacao','$localizacao','$area','$pib','$idh',
 		'$text_historia','$img_historia','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
-		print_r($sql);
 		$incluir = mysqli_query($cn, $sql);
 		header("Location: ../../cods/adm1/forms-add/add-regiao.php");
 	}

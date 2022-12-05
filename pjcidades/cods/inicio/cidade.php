@@ -10,17 +10,23 @@
 	<!-- Incluir Menu -->
 	<?php 
 		include ("./menu.php");
+		include ("./pages-menu/conexao.php");
+
+		 $id = $_GET['id'];
+
+		 $consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade` WHERE `id` = '$id'");
+         $exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
 	?>
 
 	<main>
 		<section id="inicio">
 			<div class="container-inicio">
 				<div class="text-inicio">
-					<h1>Rio de Janeiro</h1>
+					<h1><?php echo $exibe_cidade[0]['nome']; ?></h1>
 				</div>
 			</div>
 
-			<img src="https://www.queroviajarmais.com/wp-content/uploads/2020/08/rio-de-janeiro-fotos.jpg" class="img-inicio">
+			<img src="<?php echo $exibe_cidade[0]['imagem_inicio'];?>" class="img-inicio">
 		</section>
 		
 		<section id="regioes">
@@ -57,59 +63,34 @@
 						<h2>Dados</h2>
 					</div>
 					<div class="informacoes">
-						<p>Nome Oficioal: República Federativa do Brasil</p>
-						<p>Gentilico: Brasileiro</p>
-						<p>Localização: América do Sul</p>
-						<p>Capital: Brasília</p>
-						<p>Número de Habitantes: </p>
-						<p>Área Territorial: </p>
-						<p>PIB: </p>
-						<p>IDH: </p>
+						<p>Nome Oficioal: <?php echo $exibe_cidade[0]['nome_oficial'];?></p>
+						<p>Gentilico: <?php echo $exibe_cidade[0]['gentilico'];?></p>
+						<p>Localização: <?php echo $exibe_cidade[0]['localizacao'];?></p>
+						<p>Número de Habitantes: <?php echo $exibe_cidade[0]['populacao'];?></p>
+						<p>Área Territorial: <?php echo $exibe_cidade[0]['area'];?></p>
+						<p>PIB: <?php echo $exibe_cidade[0]['pib'];?></p>
+						<p>IDH: <?php echo $exibe_cidade[0]['idh'];?></p>
 					</div>
 			</div>
 		</section>
 
 		<section id="historia">
 			<div class="img-historia">
-				<img src="https://img.quizur.com/f/img5e8773335968a1.12960017.jpg?lastEdited=1585935165">
-				<div></div>
+				<img src="<?php echo $exibe_cidade[0]['imagem_historia'];?>">
 			</div>
-			<div class="container-historia">
-				<div></div>
-				<div class="text-historia">
-					<h2>História</h2>
-					<p>Os colonizadores chegarem à América do Sul. Os primeiros portugueses aportaram no litoral nordeste do país no ano de 1500, considerado o ano do descobrimento do Brasil pelos europeus.
-
-					Teve início, então, o período conhecido como Brasil Colônia, que se estendeu até 1822. O território estava dividido em capitanias hereditárias, e a capital brasileira era a cidade de Salvador, na Bahia. A economia era baseada na produção de cana-de-açúcar e nos engenhos, que utilizavam mão de obra de pessoas escravizadas, inicialmente indígenas e posteriormente africanos trazidos à força para o país.
-
-					A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.
-
-					Em 7 de setembro de 1822, foi declarada a independência do Brasil em relação a Portugal, inaugurando, assim, o Brasil Império. Esse período foi marcado por intensas revoltas (Cabanagem, Balaiada, Sabinada, Revolução Farroupilha, Revolta dos Malês) e pela abolição da escravatura em 1888, depois de uma longa campanha.
-
-					O Brasil se tornou uma república em 15 de novembro de 1889, sistema de governo em voga até o presente. O período republicano se inicia com a Primeira República, que vai de 1889 a 1930, marcada pelo desenvolvimento da economia cafeeira e intensificação da urbanização no país, concentrada principalmente no Sudeste.
-
-					Logo na sequência, ocorreram a Era Vargas (1930–1945) e a Quarta República (1945–1964), que antecederam a Ditadura Militar (1964–1985). Destaca-se, ainda, a construção da nova capital do Brasil, entre 1957 e 1961, quando foi inaugurada (1960) e passou a exercer a função de sede do governo federal.
-
-					A redemocratização, em 1985, deu início ao período atual, denominado de Nova República, que contou, até o presente, com oito presidentes eleitos pelo voto. Nesse intervalo, o Brasil passou por inúmeras transformações, como a intensificação da urbanização, formação da região concentrada, desconcentração industrial, expansão da fronteira agrícola, períodos de grandes prosperidade econômica e também de crises profundas, além do enfrentamento recente da sua maior crise sanitária, a pandemia da covid-19.</p>
-				</div>
+			<div class="text-historia">
+				<h2>História</h2>
+				<p><?php echo $exibe_cidade[0]['text_historia'];?></p>
 			</div>
 		</section>
 
 		<section id="bandeira">
-			<div class="container-bandeira">
-				<div>
-					<h2>Bandeira</h2>
-					<p>Os colonizadores chegarem à América do Sul. Os primeiros portugueses aportaram no litoral nordeste do país no ano de 1500, considerado o ano do descobrimento do Brasil pelos europeus.
-
-					Teve início, então, o período conhecido como Brasil Colônia, que se estendeu até 1822. O território estava dividido em capitanias hereditárias, e a capital brasileira era a cidade de Salvador, na Bahia. A economia era baseada na produção de cana-de-açúcar e nos engenhos, que utilizavam mão de obra de pessoas escravizadas, inicialmente indígenas e posteriormente africanos trazidos à força para o país.
-
-					A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.</p>
-				</div>
-				<div></div>
+			<div class="text-bandeira">
+				<h2>Bandeira</h2>
+				<p><?php echo $exibe_cidade[0]['text_bandeira'];?></p>
 			</div>
 			<div class="img-bandeira">
-				<div></div>
-				<img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiragrande.jpg">
+				<img src="<?php echo $exibe_cidade[0]['imagem_bandeira'];?>">
 			</div>
 		</section>
 
@@ -119,60 +100,44 @@
 				<div class="cards-geografia">
 					<div class="border">
 						<h3>Clima</h3>
-						<p>A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.</p>
+						<p><?php echo $exibe_cidade[0]['text_clima'];?></p>
 					</div>
 
 					<div class="border">
 						<h3>Vegetação</h3>
-						<p>A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.</p>
+						<p><?php echo $exibe_cidade[0]['text_vegetacao'];?></p>
 					</div>
 
 					<div>
 						<h3>Relevo</h3>
-						<p>A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.</p>
+						<p><?php echo $exibe_cidade[0]['text_relevo'];?></p>
 					</div>
 				</div>
 			</div>
 
 			<div class="img-geografia">
-				<img src="https://www.queroviajarmais.com/wp-content/uploads/2020/08/rio-de-janeiro-fotos.jpg">
+				<img src="<?php echo $exibe_cidade[0]['imagem_inicio'];?>">
 			</div>
 		</section>
 
 		<section id="economia">
 			<div class="img-economia">
-				<img src="https://blog.climatefieldview.com.br/hubfs/Agricultura%20Moderna%20Colheitadeira%20no%20campo%20de%20trigo%20Climate%20FieldView.webp">
-				<div></div>
+				<img src="<?php echo $exibe_cidade[0]['imagem_economia'];?>">
 			</div>
 
-			<div class="container-economia">
-				<div></div>
-				<div>
-					<h2>Econômia</h2>
-					<p>Os colonizadores chegarem à América do Sul. Os primeiros portugueses aportaram no litoral nordeste do país no ano de 1500, considerado o ano do descobrimento do Brasil pelos europeus.
-
-					Teve início, então, o período conhecido como Brasil Colônia, que se estendeu até 1822. O território estava dividido em capitanias hereditárias, e a capital brasileira era a cidade de Salvador, na Bahia. A economia era baseada na produção de cana-de-açúcar e nos engenhos, que utilizavam mão de obra de pessoas escravizadas, inicialmente indígenas e posteriormente africanos trazidos à força para o país.
-
-					A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.</p>
-				</div>
+			<div class="text-economia">
+				<h2>Econômia</h2>
+				<p><?php echo $exibe_cidade[0]['text_economia'];?></p>
 			</div>
 		</section>
 
 		<section id="cultura">
-			<div class="container-cultura">
-				<div>
-					<h2>Cultura</h2>
-					<p>Os colonizadores chegarem à América do Sul. Os primeiros portugueses aportaram no litoral nordeste do país no ano de 1500, considerado o ano do descobrimento do Brasil pelos europeus.
-
-					Teve início, então, o período conhecido como Brasil Colônia, que se estendeu até 1822. O território estava dividido em capitanias hereditárias, e a capital brasileira era a cidade de Salvador, na Bahia. A economia era baseada na produção de cana-de-açúcar e nos engenhos, que utilizavam mão de obra de pessoas escravizadas, inicialmente indígenas e posteriormente africanos trazidos à força para o país.
-
-					A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.</p>
-				</div>
-				<div></div>
+			<div class="text-cultura">
+				<h2>Cultura</h2>
+				<p><?php echo $exibe_cidade[0]['text_cultura'];?></p>
 			</div>
 			<div class="img-cultura">
-				<div></div>
-				<img src="http://gabriellemaison.com.br/wp-content/uploads/2019/01/12-lugares-para-viajar-e-conhecer-melhor-a-cultura-brasileira08.jpg">
+				<img src="<?php echo $exibe_cidade[0]['imagem_cultura'];?>">
 			</div>
 		</section>
 
@@ -223,7 +188,7 @@
 			</div>
 
 			<div class="img-turismo">
-				<img src="https://www.queroviajarmais.com/wp-content/uploads/2020/08/rio-de-janeiro-fotos.jpg">
+				<img src="<?php echo $exibe_cidade[0]['imagem_inicio'];?>">
 			</div>
 		</section>
 

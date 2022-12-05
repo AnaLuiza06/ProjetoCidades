@@ -21,8 +21,8 @@
 	    $exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
 	?>
 	<main class="main-forms">
-		<form method="post" action="../../../conexao/adiciona/add-pais.php?id=<?php echo $id;?>">
-			<h2>Adicionar País</h2>
+		<form method="post" action="../../../conexao/update/up-pais.php?id=<?php echo $id;?>">
+			<h2>Atualizar País</h2>
 			<div class="card-form">
 				<h4>Inicio</h4>
 				<div class="input-form">
@@ -32,6 +32,10 @@
 				<div class="input-form">
 					<label>Imagem</label>
 					<input type="text" name="imgInicio" value="<?php echo $exibe_pais[0]['imagem_inicio'];?>">
+				</div>
+				<div class="input-form">
+					<label>Descrição Card</label>
+					<input type="text" name="descricao" value="<?php echo $exibe_pais[0]['descricao'];?>">
 				</div>
 			</div>
 
@@ -79,7 +83,22 @@
 
 				<div class="input-form">
 					<label>Idioma</label>
-					<input type="text" name="idioma" alue="<?php echo $exibe_pais[0]['idioma'];?>">
+					<input type="text" name="idioma" value="<?php echo $exibe_pais[0]['idioma'];?>">
+				</div>
+
+				<div class="input-form">
+					<label>Governo</label>
+					<input type="text" name="governo" value="<?php echo $exibe_pais[0]['governo'];?>">
+				</div>
+
+				<div class="input-form">
+					<label>Divisão Administrativa</label>
+					<input type="text" name="estados" value="<?php echo $exibe_pais[0]['estados'];?>">
+				</div>
+
+				<div class="input-form">
+					<label>Moeda</label>
+					<input type="text" name="moeda" value="<?php echo $exibe_pais[0]['moeda'];?>">
 				</div>
 			</div>
 

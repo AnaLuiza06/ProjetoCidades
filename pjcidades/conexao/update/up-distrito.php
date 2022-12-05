@@ -8,14 +8,13 @@
 	$img_inicio = $_POST['imgInicio'];
     $pais = $_POST['pais'];
     $cidade = $_POST['cidade'];
+    $descricao = $_POST['descricao'];
 
 	$populacao = $_POST['populacao'];
 	$area = $_POST['area'];
 	$pib = $_POST['pib'];
 	$idh = $_POST['idh'];
-	$nome_oficial = $_POST['nmeoficial'];
 	$localizacao = $_POST['localizacao'];
-    $gentilico = $_POST['gentilico'];
 
 	$text_historia = $_POST['textHistoria'];
 	$img_historia = $_POST['imgHistoria'];
@@ -30,14 +29,12 @@
 	$text_economia = $_POST['textEconomia'];
 	$img_economia = $_POST['imgEconomia'];
 
-	$sql = "UPDATE `distrito` SET `id_pais`='$pais',`id_cidade`='$cidade',`nome`='$cidade',
-    `imagem_inicio`='$img_inicio',`nome_oficial`='$nome_oficial',`gentilico`='$gentilico',`populacao`='$populacao',
+	$sql = "UPDATE `distrito` SET `id_pais`='$pais',`id_cidade`='$cidade',`nome`='$nome',
+    `imagem_inicio`='$img_inicio',`descricao`='$descricao',`populacao`='$populacao',
     `localizacao`='$localizacao',`area`='$area',`pib`='$pib',`idh`='$idh',`text_historia`='$text_historia',
     `imagem_historia`='$img_historia',`text_economia`='$text_economia',`imagem_economia`='$img_economia',`text_cultura`='$text_cultura',
     `imagem_cultura`='$img_cultura',`text_clima`='$clima',`text_vegetacao`='$vegetacao',`text_relevo`='$relevo' WHERE `id`='$id'";
 
 	$atualiza = mysqli_query($cn, $sql);
 
-    print_r($sql);
-
-	// header("Location: ../../cods/adm1/forms-update/up-distrito.php?id=".$id."");
+	 header("Location: ../../cods/adm1/forms-update/up-distrito.php?id=".$id."");

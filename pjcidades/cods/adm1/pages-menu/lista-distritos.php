@@ -37,7 +37,7 @@
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-3">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="<?php echo $exibe_distrito[0]['imagem_inicio'];?>" alt="Imagem de capa do card">
+                            <img class="card-img-top" src="<?php echo $exibe_distrito[$i]['imagem_inicio'];?>" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <h5><?php echo $exibe_distrito[$i]['nome'];?></h5>
                                 <h6><?php echo $exibe_cidade[0]['nome'];?></h6>
@@ -46,7 +46,7 @@
                                         <a href="../forms-update/up-distrito.php?id=<?php echo $exibe_distrito[$i]['id'];?>">Alterar</a>
                                     </button>
                                     <button>
-                                        <a href="#">Deletar</a>
+                                        <a href="../../../conexao/deleta/del-distrito.php?id=<?php echo$exibe_distrito[$i]['id'];?>">Deletar</a>
                                     </button>
                                 </div>
                             </div>

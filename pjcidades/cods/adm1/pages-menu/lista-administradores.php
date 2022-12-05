@@ -11,6 +11,11 @@
 
 	<?php
 		include ("./menu.php");
+        include ("./conexao.php");
+
+        $consulta = mysqli_query($cn, "SELECT * FROM `adm`");
+        $exibe = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
+
 	?>
 
 	<main class="page-adm">
@@ -36,21 +41,20 @@
                 </thead>
 
                 <tbody>
-                    <tr class="row">
-                        <td class="col-1">01</td>
-                        <td class="col-4">01</td>
-                        <td class="col-4">01</td>
-                        <td class="col-2">01</td>
-                        <td class="col-1"><button>Del</button></td>
-                    </tr>
+                    <?php
+                        for ($i=0; $i < count($exibe); $i++) { 
+                    ?>
+                        <tr class="row">
+                            <td class="col-1"><?php echo $exibe[$i]['id'];?></td>
+                            <td class="col-4"><?php echo $exibe[$i]['nome'];?></td>
+                            <td class="col-4"><?php echo $exibe[$i]['email'];?></td>
+                            <td class="col-2"><?php echo $exibe[$i]['nascimento'];?></td>
+                            <td class="col-1"><button>Del</button></td>
+                        </tr>
+                    <?php
+                        }
 
-                    <tr class="row">
-                        <td class="col-1">01</td>
-                        <td class="col-4">01</td>
-                        <td class="col-4">01</td>
-                        <td class="col-2">01</td>
-                        <td class="col-1"><button>Del</button></td>
-                    </tr>
+                    ?>
                 </tbody>
             </table>
         </section>

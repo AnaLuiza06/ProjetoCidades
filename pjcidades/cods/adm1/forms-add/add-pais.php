@@ -26,29 +26,14 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio">
 				</div>
+				<div class="input-form">
+					<label>Descrição Card</label>
+					<input type="text" name="descricao">
+				</div>
 			</div>
 
 			<div class="card-form">
 				<h4>Dados</h4>
-				<div class="input-form">
-					<label>População</label>
-					<input type="numer" name="populacao">
-				</div>
-
-				<div class="input-form">
-					<label>Área</label>
-					<input type="number" name="area">
-				</div>
-
-				<div class="input-form">
-					<label>PIB</label>
-					<input type="numer" name="pib">
-				</div>
-
-				<div class="input-form">
-					<label>IDH</label>
-					<input type="numer" name="idh">
-				</div>
 
 				<div class="input-form">
 					<label>Nome Oficioal</label>
@@ -73,6 +58,41 @@
 				<div class="input-form">
 					<label>Idioma</label>
 					<input type="text" name="idioma">
+				</div>
+
+				<div class="input-form">
+					<label>Governo</label>
+					<input type="text" name="governo">
+				</div>
+
+				<div class="input-form">
+					<label>Divisão Administrativa</label>
+					<input type="text" name="estados">
+				</div>
+
+				<div class="input-form">
+					<label>População</label>
+					<input type="numer" name="populacao">
+				</div>
+
+				<div class="input-form">
+					<label>Área</label>
+					<input type="number" name="area">
+				</div>
+
+				<div class="input-form">
+					<label>PIB</label>
+					<input type="numer" name="pib">
+				</div>
+
+				<div class="input-form">
+					<label>IDH</label>
+					<input type="numer" name="idh">
+				</div>
+
+				<div class="input-form">
+					<label>Moeda</label>
+					<input type="text" name="moeda">
 				</div>
 			</div>
 

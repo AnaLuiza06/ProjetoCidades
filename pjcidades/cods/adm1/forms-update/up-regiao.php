@@ -49,6 +49,10 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio" value = '<?php echo $exibe_regiao[0]['imagem_inicio'];?>'>
 				</div>
+				<div class="input-form">
+					<label>Descrição</label>
+					<input type="text" name="descricao" value = "<?php echo $exibe_regiao[0]['descricao'];?>">
+				</div>
 			</div>
 
 			<div class="card-form">
@@ -56,6 +60,11 @@
 				<div class="input-form">
 					<label>População</label>
 					<input type="numer" name="populacao" value = '<?php echo $exibe_regiao[0]['populacao'];?>'>
+				</div>
+
+				<div class="input-form">
+					<label>Estados</label>
+					<input type="text" name="estados" value = '<?php echo $exibe_regiao[0]['estados'];?>'>
 				</div>
 
 				<div class="input-form">
@@ -71,11 +80,6 @@
 				<div class="input-form">
 					<label>IDH</label>
 					<input type="numer" name="idh" value = '<?php echo $exibe_regiao[0]['idh'];?>'>
-				</div>
-
-				<div class="input-form">
-					<label>Nome Oficioal</label>
-					<input type="text" name="nmeoficial" value = '<?php echo $exibe_regiao[0]['nome_oficial'];?>'>
 				</div>
 
 				<div class="input-form">

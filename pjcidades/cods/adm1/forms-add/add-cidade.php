@@ -56,6 +56,10 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio">
 				</div>
+				<div class="input-form">
+					<label>Descrição</label>
+					<input type="text" name="descricao">
+				</div>
 			</div>
 
 			<div class="card-form">
@@ -81,11 +85,6 @@
 				</div>
 
 				<div class="input-form">
-					<label>Nome Oficioal</label>
-					<input type="text" name="nmeoficial">
-				</div>
-
-				<div class="input-form">
 					<label>Gentilico</label>
 					<input type="text" name="gentilico">
 				</div>
@@ -93,11 +92,6 @@
 				<div class="input-form">
 					<label>Localização</label>
 					<input type="text" name="localizacao">
-				</div>
-
-				<div class="input-form">
-					<label>Capital</label>
-					<input type="text" name="capital">
 				</div>
 			</div>
 

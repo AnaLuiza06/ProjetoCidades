@@ -27,7 +27,7 @@
 	?>
 	<main class="main-forms">
 		<form method="post" action="../../../conexao/update/up-estado.php?id=<?php echo $id;?>">
-			<h2>Adicionar Estado</h2>
+			<h2>Alterar Estado</h2>
 			<div class="card-form">
 				<h4>Inicio</h4>
 				<div class="input-form">
@@ -62,6 +62,10 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio" value = '<?php echo $exibe_estado[0]['imagem_inicio'];?>'>
 				</div>
+				<div class="input-form">
+					<label>Descricao</label>
+					<input type="text" name="descricao" value = '<?php echo $exibe_estado[0]['descricao'];?>'>
+				</div>
 			</div>
 
 			<div class="card-form">
@@ -84,11 +88,6 @@
 				<div class="input-form">
 					<label>IDH</label>
 					<input type="numer" name="idh" value = '<?php echo $exibe_estado[0]['idh'];?>'>
-				</div>
-
-				<div class="input-form">
-					<label>Nome Oficioal</label>
-					<input type="text" name="nmeoficial" value = '<?php echo $exibe_estado[0]['nome_oficial'];?>'>
 				</div>
 
 				<div class="input-form">

@@ -141,7 +141,6 @@ tr{
 }
 
 .card{
-	margin-top: 40px;
 	z-index: 1;
 }
 .btns-cards{
@@ -169,4 +168,53 @@ tr{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.card{
+	position: relative;
+	width: 350px;
+	height: 430px;
+	margin-bottom: 30px;
+	border: none;
+}
+.card-body{
+	width: 350px;
+	height: 430px;
+	background-color: rgba(30, 30, 30, 0.79);
+	position: relative;
+}
+.card-body div{
+	position: absolute;
+	bottom: 0;
+	width: 300px;
+	margin: auto;
+	color: #fff;
+}
+.card-body button{
+	width: 120px;
+	height: 30px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.card-body a{
+	color: #fff;
+}
+.card img{
+	position: absolute;
+	width: 350px;
+	height: 100%;
+	z-index: -2;
+}
+.text-intro{
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+.container{
+	position: relative;
+}
+.row{
+	position: absolute;
+	top: 0;
+	transform: translate(0px, -30px);
 }

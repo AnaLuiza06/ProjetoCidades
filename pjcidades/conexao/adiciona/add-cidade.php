@@ -6,6 +6,7 @@
 	$img_inicio = $_POST['imgInicio'];
     $pais = $_POST['pais'];
     $estado = $_POST['estado'];
+    $descricao = $_POST['descricao'];
 
 	$populacao = $_POST['populacao'];
 	$area = $_POST['area'];
@@ -43,12 +44,11 @@
 	} else{
 		// echo "Usuário NÃO cadastrado";
 
-		$sql = "INSERT INTO `cidade`(`id_pais`, `id_estado`, `nome`, `imagem_inicio`, `nome_oficial`, `gentilico`, `populacao`, `localizacao`,
-        `capital`, `area`, `pib`, `idh`, `text_historia`, `imagem_historia`, `text_bandeira`, `imagem_bandeira`, `text_economia`, `imagem_economia`, 
-        `text_cultura`, `imagem_cultura`, `text_clima`, `text_vegetacao`, `text_relevo`) VALUES ('$pais', '$estado','$nome','$img_inicio','$nome_oficial', '$gentilico', 
-        '$populacao','$localizacao','$capital','$area','$pib','$idh',
+		$sql = "INSERT INTO `cidade`(`id_pais`, `id_estado`, `nome`, `imagem_inicio`, `descricao`, `gentilico`, `populacao`, `localizacao`, `area`, `pib`, `idh`, `text_historia`, `imagem_historia`, `text_bandeira`, `imagem_bandeira`, `text_economia`, `imagem_economia`, `text_cultura`, `imagem_cultura`, `text_clima`, `text_vegetacao`, `text_relevo`) VALUES ('$pais', '$estado','$nome','$img_inicio','$descricao', '$gentilico', 
+        '$populacao','$localizacao','$area','$pib','$idh',
         '$text_historia','$img_historia', '$text_bandeira','$img_bandeira','$text_economia','$img_economia','$text_cultura','$img_cultura','$clima','$vegetacao','$relevo')";
+
 		$incluir = mysqli_query($cn, $sql);
 
-		 header("Location: ../../cods/adm1/forms-add/add-cidade.php");
+		  header("Location: ../../cods/adm1/forms-add/add-cidade.php");
 	}

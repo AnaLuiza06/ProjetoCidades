@@ -11,6 +11,7 @@
 
 	<?php
 		include ("./menu.php");
+		include ("./pages-menu/conexao.php");
 	?>
 
 	<main class="home-adm">
@@ -35,27 +36,83 @@
 
 		<section class="numeros">
 			<div>
-				<h1>00</h1>
+				<?php
+					$consulta_pais = mysqli_query($cn, "SELECT * FROM `pais`");
+	 				$exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
+
+	 				if (count($exibe_pais) > 9) {
+	 					echo "<h1>".count($exibe_pais)."</h1>";	
+	 				}
+
+	 				else{
+	 					echo "<h1>0".count($exibe_pais)."</h1>";	
+	 				}
+				?>
+				
 				<p>Países</p>
 			</div>
 
 			<div>
-				<h1>00</h1>
+				<?php
+					$consulta_regiao = mysqli_query($cn, "SELECT * FROM `regiao`");
+	 				$exibe_regiao = mysqli_fetch_all($consulta_regiao, MYSQLI_ASSOC);
+
+	 				if (count($exibe_regiao) > 9) {
+	 					echo "<h1>".count($exibe_regiao)."</h1>";	
+	 				}
+
+	 				else{
+	 					echo "<h1>0".count($exibe_regiao)."</h1>";	
+	 				}
+				?>
 				<p>Regiões</p>
 			</div>
 
 			<div>
-				<h1>00</h1>
+				<?php
+					$consulta_estado = mysqli_query($cn, "SELECT * FROM `estado`");
+	 				$exibe_estado = mysqli_fetch_all($consulta_estado, MYSQLI_ASSOC);
+
+	 				if (count($exibe_estado) > 9) {
+	 					echo "<h1>".count($exibe_estado)."</h1>";	
+	 				}
+
+	 				else{
+	 					echo "<h1>0".count($exibe_estado)."</h1>";	
+	 				}
+				?>
 				<p>Estados</p>
 			</div>
 
 			<div>
-				<h1>00</h1>
+				<?php
+					$consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade`");
+	 				$exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
+
+	 				if (count($exibe_cidade) > 9) {
+	 					echo "<h1>".count($exibe_cidade)."</h1>";	
+	 				}
+
+	 				else{
+	 					echo "<h1>0".count($exibe_cidade)."</h1>";	
+	 				}
+				?>
 				<p>Cidades</p>
 			</div>
 
 			<div>
-				<h1>00</h1>
+				<?php
+					$consulta_pturistico = mysqli_query($cn, "SELECT * FROM `pturistico`");
+	 				$exibe_pturistico = mysqli_fetch_all($consulta_pturistico, MYSQLI_ASSOC);
+
+	 				if (count($exibe_pturistico) > 9) {
+	 					echo "<h1>".count($exibe_pturistico)."</h1>";	
+	 				}
+
+	 				else{
+	 					echo "<h1>0".count($exibe_pturistico)."</h1>";	
+	 				}
+				?>
 				<p>P. Turísticos</p>
 			</div>
 
@@ -65,7 +122,18 @@
 			</div>
 
 			<div>
-				<h1>00</h1>
+				<?php
+					$consulta_adm = mysqli_query($cn, "SELECT * FROM `adm`");
+	 				$exibe_adm = mysqli_fetch_all($consulta_adm, MYSQLI_ASSOC);
+
+	 				if (count($exibe_adm) > 9) {
+	 					echo "<h1>".count($exibe_adm)."</h1>";	
+	 				}
+
+	 				else{
+	 					echo "<h1>0".count($exibe_adm)."</h1>";	
+	 				}
+				?>
 				<p>Administradores</p>
 			</div>
 		</section>

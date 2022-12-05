@@ -6,10 +6,10 @@
 		<ul>
             <li><a href="../../../index.php">Home</a></li>
 			<li><a href="./pais.php">Países</a></li>
-            <li><a href="./regioes.php">Países</a></li>
+            <li><a href="./regioes.php">Regiões</a></li>
 			<li><a href="./estados.php">Estados</a></li>
 			<li><a href="./cidades.php">Cidades</a></li>
-            <li><a href="./distritos.php">Países</a></li>
+            <li><a href="./distritos.php">Distritos</a></li>
 			<li><a href="./p-turisticos.php">Pontos Turísticos</a></li>
 		</ul>
 		<div class="btn-login">

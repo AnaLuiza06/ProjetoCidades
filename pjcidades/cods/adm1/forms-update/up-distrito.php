@@ -72,6 +72,10 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio" value="<?php echo $exibe_distrito[0]['imagem_inicio'];?>">
 				</div>
+				<div class="input-form">
+					<label>Descrição</label>
+					<input type="text" name="descricao" value="<?php echo $exibe_distrito[0]['descricao'];?>">
+				</div>
 			</div>
 
 			<div class="card-form">
@@ -94,16 +98,6 @@
 				<div class="input-form">
 					<label>IDH</label>
 					<input type="numer" name="idh" value="<?php echo $exibe_distrito[0]['idh'];?>">
-				</div>
-
-				<div class="input-form">
-					<label>Nome Oficioal</label>
-					<input type="text" name="nmeoficial" value="<?php echo $exibe_distrito[0]['nome_oficial'];?>">
-				</div>
-
-				<div class="input-form">
-					<label>Gentilico</label>
-					<input type="text" name="gentilico" value="<?php echo $exibe_distrito[0]['gentilico'];?>">
 				</div>
 
 				<div class="input-form">

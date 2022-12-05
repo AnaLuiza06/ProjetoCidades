@@ -56,6 +56,10 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio">
 				</div>
+				<div class="input-form">
+					<label>Descricao</label>
+					<input type="text" name="descricao">
+				</div>
 			</div>
 
 			<div class="card-form">
@@ -78,11 +82,6 @@
 				<div class="input-form">
 					<label>IDH</label>
 					<input type="numer" name="idh">
-				</div>
-
-				<div class="input-form">
-					<label>Nome Oficioal</label>
-					<input type="text" name="nmeoficial">
 				</div>
 
 				<div class="input-form">

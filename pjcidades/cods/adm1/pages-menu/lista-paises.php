@@ -44,7 +44,7 @@
                                 <p class="card-text">Localização: <?php echo $exibe_pais[$i]['localizacao']?></p>
                                 <div class="btns-cards">
                                     <button>
-                                        <a href="#">Alterar</a>
+                                        <a href="../forms-update/up-pais.php?id=<?php echo $exibe_pais[$i]['id'];?>">Alterar</a>
                                     </button>
                                     <button>
                                         <a href="#">Deletar</a>

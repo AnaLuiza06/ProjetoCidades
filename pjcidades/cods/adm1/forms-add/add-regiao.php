@@ -42,6 +42,10 @@
 					<label>Imagem</label>
 					<input type="text" name="imgInicio">
 				</div>
+				<div class="input-form">
+					<label>Drescrição</label>
+					<input type="text" name="descricao">
+				</div>
 			</div>
 
 			<div class="card-form">
@@ -49,6 +53,11 @@
 				<div class="input-form">
 					<label>População</label>
 					<input type="numer" name="populacao">
+				</div>
+
+				<div class="input-form">
+					<label>Estados</label>
+					<input type="text" name="estados">
 				</div>
 
 				<div class="input-form">
@@ -64,11 +73,6 @@
 				<div class="input-form">
 					<label>IDH</label>
 					<input type="numer" name="idh">
-				</div>
-
-				<div class="input-form">
-					<label>Nome Oficioal</label>
-					<input type="text" name="nmeoficial">
 				</div>
 
 				<div class="input-form">
