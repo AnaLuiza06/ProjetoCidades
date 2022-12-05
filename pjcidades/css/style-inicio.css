@@ -378,6 +378,11 @@ footer{
 	justify-content: center;
 	gap: 30px;
 }
+.cards-turismo > div {
+	display: flex;
+	justify-content: center;
+	border: 2px solid red;
+}
 .cards-turismo a{
 	position: relative;
 	width: 360px;
@@ -402,11 +407,6 @@ footer{
 	z-index: 2;
 }
 
-.card-turismo > div {
-	display: flex;
-	justify-content: center;
-	border: 2px solid red;
-}
 
 .text-turismo{
 	position: absolute;
