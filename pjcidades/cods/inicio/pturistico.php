@@ -10,7 +10,7 @@
 	<!-- Incluir Menu -->
 	<?php 
 		include ("./menu.php");
-		include ("../conexao.php");
+		include ("./pages-menu/conexao.php");
 
 		$id = $_GET['id'];
 		$consulta_pturistico = mysqli_query($cn, "SELECT * FROM `pturistico` WHERE `id` = '$id'");
