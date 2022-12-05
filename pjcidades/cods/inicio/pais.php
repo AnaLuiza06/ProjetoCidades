@@ -158,8 +158,8 @@
 								$consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade` WHERE `id` = '$id_cidade'");
 								$exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
 						?>
-							<div class="col-lg-4 col-md-6 col-sm-12 col-3">
-								<div class="card" style="width: 18rem;">
+							<div class="">
+								<div class="card">
 									<img class="card-img-top" src="<?php echo $exibe_pturistico[$i]['imagem_inicio'];?>" alt="Imagem de capa do card">
 									<div class="card-body">
 										<div>
