@@ -13,6 +13,9 @@
 	<?php
 		include ("./menu.php");
         include ("./conexao.php");
+
+        $consulta_pais = mysqli_query($cn, "SELECT * FROM `pais`");
+        $exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
 	?>
 
 	<main class="page-adm">
@@ -41,8 +44,6 @@
         <section class="container">
 			<div class="row">
                 <?php
-                    $consulta_pais = mysqli_query($cn, "SELECT * FROM `pais`");
-                    $exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
 
                     for ($i=0; $i < count($exibe_pais); $i++) { 
                 ?>

@@ -35,7 +35,7 @@
             <div class="text-regioes">
                 <div class="text-intro">
                     <p class="desc-pais">Tenha acesso aos dados de todos os países, sabendo mais da história, sua geografia, economia e cultura.</p>
-                    <h1>+ de 25 Regiões inseridas</h1>
+                    <h1>+ de <?php echo count($exibe_pturistico);?> Regiões inseridas</h1>
                 </div>
             </div>
         </section>

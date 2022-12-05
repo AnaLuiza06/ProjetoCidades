@@ -113,7 +113,7 @@
 
 				<div class="input-form">
 					<label>Localização</label>
-					<input type="number" name="localizacao">
+					<input type="text" name="localizacao">
 				</div>
 
 				<div class="input-form">

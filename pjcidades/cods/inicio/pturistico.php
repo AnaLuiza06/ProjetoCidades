@@ -10,17 +10,22 @@
 	<!-- Incluir Menu -->
 	<?php 
 		include ("./menu.php");
+		include ("./conexao.php");
+
+		$id = $_GET['id'];
+		$consulta_pturistico = mysqli_query($cn, "SELECT * FROM `pturistico` WHERE `id` = '$id'");
+         $exibe_pturistico = mysqli_fetch_all($consulta_pturistico, MYSQLI_ASSOC);
 	?>
 
 	<main>
 		<section id="inicio">
 			<div class="container-inicio">
 				<div class="text-inicio">
-					<h1>Cristo Redentor</h1>
+					<h1><?php $exibe_pturistico[0]['nome'];?></h1>
 				</div>
 			</div>
 
-			<img src="https://www.queroviajarmais.com/wp-content/uploads/2020/08/rio-de-janeiro-fotos.jpg" class="img-inicio">
+			<img src="<?php $exibe_pturistico[0]['imagem_inicio'];?>" class="img-inicio">
 		</section>
 		
 		<section id="regioes">
@@ -30,87 +35,39 @@
 						<h2>Dados</h2>
 					</div>
 					<div class="informacoes">
-						<p>Nome: República Federativa do Brasil</p>
-						<p>Tipo de Obra: Urbana</p>
-						<p>Responsável: </p>
-						<p>Localização: Rio de Janeiro</p>
-						<p>Dimensões: </p>
-						<p>Idade: </p>
+						<p>Tipo de Obra: <?php $exibe_pturistico[0]['tipo'];?></p>
+						<p>Responsável: <?php $exibe_pturistico[0]['responsavel'];?></p>
+						<p>Localização: <?php $exibe_pturistico[0]['localizacao'];?></p>
+						<p>Área: <?php $exibe_pturistico[0]['area'];?></p>
+						<p>Existe desde: <?php $exibe_pturistico[0]['data_construcao'];?></p>
 					</div>
 			</div>
 		</section>
 
 		<section id="historia">
 			<div class="img-historia">
-				<img src="https://img.quizur.com/f/img5e8773335968a1.12960017.jpg?lastEdited=1585935165">
+				<img src="<?php $exibe_pturistico[0]['imagem_historia'];?>">
 				<div></div>
 			</div>
 			<div class="container-historia">
 				<div></div>
 				<div class="text-historia">
 					<h2>História</h2>
-					<p>Os colonizadores chegarem à América do Sul. Os primeiros portugueses aportaram no litoral nordeste do país no ano de 1500, considerado o ano do descobrimento do Brasil pelos europeus.
-
-					Teve início, então, o período conhecido como Brasil Colônia, que se estendeu até 1822. O território estava dividido em capitanias hereditárias, e a capital brasileira era a cidade de Salvador, na Bahia. A economia era baseada na produção de cana-de-açúcar e nos engenhos, que utilizavam mão de obra de pessoas escravizadas, inicialmente indígenas e posteriormente africanos trazidos à força para o país.
-
-					A descoberta de ouro em Minas Gerais mudou o centro de gravidade da colônia para a região Sudeste, o que se confirmou posteriormente com a transferência da capital para a cidade do Rio de Janeiro, em 1763. No início do século XIX, em 1808, a Família Real portuguesa se mudou para a então capital da colônia, causando transformações profundas na cidade e, em maior escala, na política da época.
-
-					Em 7 de setembro de 1822, foi declarada a independência do Brasil em relação a Portugal, inaugurando, assim, o Brasil Império. Esse período foi marcado por intensas revoltas (Cabanagem, Balaiada, Sabinada, Revolução Farroupilha, Revolta dos Malês) e pela abolição da escravatura em 1888, depois de uma longa campanha.
-
-					O Brasil se tornou uma república em 15 de novembro de 1889, sistema de governo em voga até o presente. O período republicano se inicia com a Primeira República, que vai de 1889 a 1930, marcada pelo desenvolvimento da economia cafeeira e intensificação da urbanização no país, concentrada principalmente no Sudeste.
-
-					Logo na sequência, ocorreram a Era Vargas (1930–1945) e a Quarta República (1945–1964), que antecederam a Ditadura Militar (1964–1985). Destaca-se, ainda, a construção da nova capital do Brasil, entre 1957 e 1961, quando foi inaugurada (1960) e passou a exercer a função de sede do governo federal.
-
-					A redemocratização, em 1985, deu início ao período atual, denominado de Nova República, que contou, até o presente, com oito presidentes eleitos pelo voto. Nesse intervalo, o Brasil passou por inúmeras transformações, como a intensificação da urbanização, formação da região concentrada, desconcentração industrial, expansão da fronteira agrícola, períodos de grandes prosperidade econômica e também de crises profundas, além do enfrentamento recente da sua maior crise sanitária, a pandemia da covid-19.</p>
+					<p><?php $exibe_pturistico[0]['text_historia'];?></p>
 				</div>
 			</div>
 		</section>
 
-		<section id="comentarios">
-			<h2>Comentários</h2>
-			<div class="container-comentarios">
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosaj</p>
-					</div>
-				</div>
-
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
+		<section id="bandeira">
+			<div class="text-bandeira">
+				<h2>Curiosidades</h2>
+				<p><?php echo $exibe_pturistico[0]['text_curiosidades'];?></p>
+			</div>
+			<div class="img-bandeira">
+				<img src="<?php echo $exibe_pturistico[0]['imagem_curiosidades'];?>">
 			</div>
 		</section>
+
 	</main>
 
 		<footer>
