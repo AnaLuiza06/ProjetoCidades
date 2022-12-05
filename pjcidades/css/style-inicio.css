@@ -401,6 +401,13 @@ footer{
 	background: red;
 	z-index: 2;
 }
+
+.card-turismo > div {
+	display: flex;
+	justify-content: center;
+	border: 2px solid red;
+}
+
 .text-turismo{
 	position: absolute;
 	bottom: 0;
