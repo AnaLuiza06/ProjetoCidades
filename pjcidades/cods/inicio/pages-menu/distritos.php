@@ -35,7 +35,7 @@
             <div class="text-regioes">
                 <div class="text-intro">
                     <p class="desc-pais">Tenha acesso aos dados de todos os países, sabendo mais da história, sua geografia, economia e cultura.</p>
-                    <h1>+ de 25 Regiões inseridas</h1>
+                    <h1>+ de <?php echo count($exibe_distrito);?> Regiões inseridas</h1>
                 </div>
             </div>
         </section>
@@ -55,7 +55,7 @@
                                 <div>
                                     <h5><?php echo $exibe_distrito[$i]['nome'];?></h5>
                                     <h6><?php echo $exibe_cidade[0]['nome'];?></h6>
-                                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                                    <p class="card-text"><?php echo $exibe_distrito[$i]['descricao'];?></p>
                                     <button><a href="../distrito.php?id=<?php echo $exibe_distrito[$i]['id'];?>">Saber Mais</a></button>
                                 </div>
                             </div>

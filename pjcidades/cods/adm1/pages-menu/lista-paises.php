@@ -37,7 +37,7 @@
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
+                            <img class="card-img-top" src="<?php echo $exibe_pais[$i]['imagem_inicio']?>" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <h5><?php echo $exibe_pais[$i]['nome']?></h5>
                                 <p class="card-text">Nome Oficial: <?php echo $exibe_pais[$i]['nome_oficial']?></p>

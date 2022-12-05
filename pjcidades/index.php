@@ -92,7 +92,6 @@
                                     <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                                     <button><a href="../pais.php?id=<?php echo $exibe_pais[$i]['id']?>">Saber Mais</a></button>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 <?php

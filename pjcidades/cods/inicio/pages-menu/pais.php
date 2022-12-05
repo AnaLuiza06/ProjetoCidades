@@ -32,7 +32,7 @@
             <div class="text-regioes">
                 <div class="text-intro">
                     <p class="desc-pais">Tenha acesso aos dados de todos os países, sabendo mais da história, sua geografia, economia e cultura.</p>
-                    <h1>+ de 25 Regiões inseridas</h1>
+                    <h1>+ de <?php echo count($exibe_pais);?> Regiões inseridas</h1>
                 </div>
             </div>
         </section>
@@ -48,11 +48,11 @@
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://www.turismoecia.net/wp-content/uploads/2020/01/01-Centro-Hist%C3%B3rico-01.jpg" alt="Imagem de capa do card">
+                            <img class="card-img-top" src="<?php echo $exibe_pais[$i]['imagem_inicio']?>" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <div>
                                     <h3><?php echo $exibe_pais[$i]['nome']?></h3>
-                                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                                    <p class="card-text"><?php echo $exibe_pais[$i]['descricao']?></p>
                                     <button><a href="../pais.php?id=<?php echo $exibe_pais[$i]['id']?>">Saber Mais</a></button>
                                 </div>
                             </div>
