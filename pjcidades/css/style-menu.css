@@ -181,6 +181,7 @@ tr{
 	height: 430px;
 	background-color: rgba(30, 30, 30, 0.79);
 	position: relative;
+	color: #fff;
 }
 .card-body div{
 	position: absolute;
@@ -218,4 +219,9 @@ tr{
 	top: 0;
 	transform: translate(0px, -30px);
 	width: 100%;
+}
+.btns-cards button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

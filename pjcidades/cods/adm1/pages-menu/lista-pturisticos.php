@@ -19,12 +19,15 @@
 
 	<main class="page-adm">
 
-        <section class="inicio">
-            <div>
-                <h1>Pontos Turíticos</h1>
-                <button><a href="../forms-add/add-pturistico.php">Adiciona</a></button>
+        <section id="inicio">
+            <div class="container-inicio">
+                <div class="text-inicio">
+                    <h1>Pontos Turíticos</h1>
+                    <button><a href="../forms-add/add-pturistico.php">Adiciona</a></button>
+                </div>
             </div>
-            <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-fundo">
+
+            <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-inicio">
         </section>
 
         <section class="container">

@@ -136,7 +136,6 @@
 							<div class="card-body">
 								<div>
 									<h3><?php echo $exibe_pturistico[$i]['nome']?></h3>
-									<p class="card-text"><?php echo $exibe_pturistico[$i]['descricao']?></p>
 									<button><a href="./cods/inicio/pturistico.php?id=<?php echo $exibe_pturistico[$i]['id']?>">Saber Mais</a></button>
 								</div>
 							</div>
