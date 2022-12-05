@@ -100,7 +100,7 @@
 
                     for ($i=0; $i < 3; $i++) { 
                 ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div>
                         <div class="card">
                             <img class="card-img-top" src="<?php echo $exibe_pais[$i]['imagem_inicio']?>" alt="Imagem de capa do card">
                             <div class="card-body">
@@ -130,7 +130,7 @@
 
 					for ($i=0; $i < 3; $i++) { 
 					?>
-					<div class="col-lg-4 col-md-6 col-sm-12">
+					<div>
 						<div class="card">
 							<img class="card-img-top" src="<?php echo $exibe_pturistico[$i]['imagem_inicio']?>" alt="Imagem de capa do card">
 							<div class="card-body">

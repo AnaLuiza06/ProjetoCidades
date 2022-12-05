@@ -165,8 +165,7 @@
 										<div>
 											<h5><?php echo $exibe_pturistico[$i]['nome'];?></h5>
 											<h6><?php echo $exibe_cidade[0]['nome'];?></h6>
-											<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-											<button><a href="../pturistico.php?id=<?php echo $exibe_pturistico[$i]['id'];?>">Saber Mais</a></button>
+											<button><a href="./pturistico.php?id=<?php echo $exibe_pturistico[$i]['id'];?>">Saber Mais</a></button>
 										</div>
 									</div>
 								</div>
