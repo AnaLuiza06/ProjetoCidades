@@ -29,12 +29,14 @@
 
 	if (count($exibe) >= 1) {
 		//echo "usuário já cadastrado";
-		 header("Location: ../../cods/adm1/forms-add/add-pturistico.php");
+		 // header("Location: ../../cods/adm1/forms-add/add-pturistico.php");
 	} else{
 		// echo "Usuário NÃO cadastrado";
 
 		$sql = "INSERT INTO `pturistico`(`id_pais`, `id_regiao`, `id_estado`, `id_cidade`, `id_distrito`, `nome`, `imagem_inicio`, `localizacao`, `area`, `data_construcao`, `tipo`, `responsavel`, `text_historia`, `imagem_historia`, `text_curiosidades`, `imagem_curiosidades`) VALUES ('$pais','$regiao','$estado','$cidade','$distrito','$nome','$img_inicio','$localizacao','$area','$data','$tipo','$responsavel','$text_historia','$img_historia','$text_curiosidades','$img_curiosidades')";
-		$incluir = mysqli_query($cn, $sql);
+		print_r($sql);
+		
+		// $incluir = mysqli_query($cn, $sql);
 
-		 header("Location: ../../cods/adm1/forms-add/add-pturistico.php");
+		//  header("Location: ../../cods/adm1/forms-add/add-pturistico.php");
 	}
