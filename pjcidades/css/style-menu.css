@@ -63,7 +63,6 @@ ul{
 }
 .numeros div{
 	width: 200px;
-	border: 1px solid blue;
 	text-align: center;
 }
 .pesquisar{
@@ -198,6 +197,13 @@ tr{
 	margin: auto;
 	margin-bottom: 20px;
 }
+.text-inicio button{
+	border: 1px solid #fff;
+	background-color: transparent;
+}
+.text-inicio button a{
+	color: #fff;
+}
 .card-body a{
 	color: #fff;
 }
@@ -210,6 +216,7 @@ tr{
 .text-intro{
 	margin-top: 70px;
 	margin-bottom: 100px;
+	text-align: center;
 }
 .container{
 	position: relative;

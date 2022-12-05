@@ -117,11 +117,6 @@
 			</div>
 
 			<div>
-				<h1>00</h1>
-				<p>Comentários</p>
-			</div>
-
-			<div>
 				<?php
 					$consulta_adm = mysqli_query($cn, "SELECT * FROM `adm`");
 	 				$exibe_adm = mysqli_fetch_all($consulta_adm, MYSQLI_ASSOC);

@@ -151,7 +151,7 @@
 		</main>
 
 		<section class="footer">
-				<div class="numer">
+			<div class="numer">
 				<div>
 					<h1><?php echo count($exibe_pais);?></h1>
 					<p>Países</p>
