@@ -15,18 +15,17 @@
 		$id = $_GET['id'];
 		$consulta_pturistico = mysqli_query($cn, "SELECT * FROM `pturistico` WHERE id = '$id'");
         $exibe_pturistico = mysqli_fetch_all($consulta_pturistico, MYSQLI_ASSOC);
-		print_r($exibe_pturistico);
 	?>
 
 	<main>
 		<section id="inicio">
 			<div class="container-inicio">
 				<div class="text-inicio">
-					<h1><?php $exibe_pturistico[0]['nome'];?></h1>
+					<h1><?= $exibe_pturistico[0]['nome'];?></h1>
 				</div>
 			</div>
 
-			<img src="<?php $exibe_pturistico[0]['imagem_inicio'];?>" class="img-inicio">
+			<img src="<?= $exibe_pturistico[0]['imagem_inicio'];?>" class="img-inicio">
 		</section>
 		
 		<section id="regioes">
@@ -36,25 +35,25 @@
 						<h2>Dados</h2>
 					</div>
 					<div class="informacoes">
-						<p>Tipo de Obra: <?php $exibe_pturistico[0]['tipo'];?></p>
-						<p>Responsável: <?php $exibe_pturistico[0]['responsavel'];?></p>
-						<p>Localização: <?php $exibe_pturistico[0]['localizacao'];?></p>
-						<p>Área: <?php $exibe_pturistico[0]['area'];?></p>
-						<p>Existe desde: <?php $exibe_pturistico[0]['data_construcao'];?></p>
+						<p>Tipo de Obra: <?= $exibe_pturistico[0]['tipo'];?></p>
+						<p>Responsável: <?= $exibe_pturistico[0]['responsavel'];?></p>
+						<p>Localização: <?= $exibe_pturistico[0]['localizacao'];?></p>
+						<p>Área: <?= $exibe_pturistico[0]['area'];?></p>
+						<p>Existe desde: <?= $exibe_pturistico[0]['data_construcao'];?></p>
 					</div>
 			</div>
 		</section>
 
 		<section id="historia">
 			<div class="img-historia">
-				<img src="<?php $exibe_pturistico[0]['imagem_historia'];?>">
+				<img src="<?= $exibe_pturistico[0]['imagem_historia'];?>">
 				<div></div>
 			</div>
 			<div class="container-historia">
 				<div></div>
 				<div class="text-historia">
 					<h2>História</h2>
-					<p><?php $exibe_pturistico[0]['text_historia'];?></p>
+					<p><?= $exibe_pturistico[0]['text_historia'];?></p>
 				</div>
 			</div>
 		</section>
@@ -62,10 +61,10 @@
 		<section id="bandeira">
 			<div class="text-bandeira">
 				<h2>Curiosidades</h2>
-				<p><?php echo $exibe_pturistico[0]['text_curiosidades'];?></p>
+				<p><?= $exibe_pturistico[0]['text_curiosidades'];?></p>
 			</div>
 			<div class="img-bandeira">
-				<img src="<?php echo $exibe_pturistico[0]['imagem_curiosidades'];?>">
+				<img src="<?= $exibe_pturistico[0]['imagem_curiosidades'];?>">
 			</div>
 		</section>
 
