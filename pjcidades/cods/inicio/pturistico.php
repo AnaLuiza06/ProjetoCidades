@@ -15,6 +15,7 @@
 		$id = $_GET['id'];
 		$consulta_pturistico = mysqli_query($cn, "SELECT * FROM `pturistico` WHERE id = '$id'");
         $exibe_pturistico = mysqli_fetch_all($consulta_pturistico, MYSQLI_ASSOC);
+		print_r($exibe_pturistico);
 	?>
 
 	<main>
