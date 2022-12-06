@@ -223,6 +223,7 @@ footer{
 	padding: 20px;
 	margin-bottom: 70px;
 	margin-top: 90px;
+	position: initial;
 }
 .informacoes{
 	width: 500px;
