@@ -41,11 +41,18 @@
 					<button class="btn-carrossel" onclick="btnAnterior()"><</button>
 					<button class="btn-carrossel" onclick="btnProximo()">></button>
 				</div>
-				<div class="container-carrossel" data-id="<?php echo count($exibe_pais);?>">
+				<div class="container-carrossel" data-count="<?php echo count($exibe_regiao);?>">
 					<?php
-						for ($i=0; $i < count($exibe_regiao) ; $i++) { 
+						for ($i=0; $i < count($exibe_regiao); $i++) { 
 					?>
-						<a href="./regiao.php?id=<?php echo $exibe_regiao[$i]['id'];?>" class="card-carrosel active" data-id="<?php echo $i;?>">
+						<?php 
+							if ($i < 3) {
+								$class = 'card-carrosel active';
+							} else {
+								$class = "card-carrosel";
+							}
+						?>
+						<a href="./regiao.php?id=<?php echo $exibe_regiao[$i]['id'];?>" class="<?= $class ?>" data-id="<?php echo $i;?>">
 							<img src="<?php echo $exibe_regiao[$i]['imagem_inicio'];?>">
 							<div>
 								<p><?php echo $exibe_regiao[$i]['nome'];?></p>

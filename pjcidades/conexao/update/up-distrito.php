@@ -28,13 +28,14 @@
 
 	$text_economia = $_POST['textEconomia'];
 	$img_economia = $_POST['imgEconomia'];
-
-	$sql = "UPDATE `distrito` SET `id_pais`='$pais',`id_cidade`='$cidade',`nome`='$nome',
+	$sql = "UPDATE `distrito` SET `id_pais`='$pais',`id_cidade`='$cidade',`nome`='$cidade',
     `imagem_inicio`='$img_inicio',`descricao`='$descricao',`populacao`='$populacao',
     `localizacao`='$localizacao',`area`='$area',`pib`='$pib',`idh`='$idh',`text_historia`='$text_historia',
-    `imagem_historia`='$img_historia',`text_economia`='$text_economia',`imagem_economia`='$img_economia',`text_cultura`='$text_cultura',
+    `imagem_historia`='$img_historia',`text_economia`='$text_economia',`imagem_economia`='$img_economia',`text_cultura`='$text_cultura','
     `imagem_cultura`='$img_cultura',`text_clima`='$clima',`text_vegetacao`='$vegetacao',`text_relevo`='$relevo' WHERE `id`='$id'";
 
 	$atualiza = mysqli_query($cn, $sql);
+
+    print_r($sql);
 
 	 header("Location: ../../cods/adm1/forms-update/up-distrito.php?id=".$id."");

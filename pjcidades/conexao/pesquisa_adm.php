@@ -11,9 +11,9 @@
     print_r($exibe);
 
     if(count($exibe) > 0){
-        //header("Location: ../cods/adm1/pages-menu/".$pagina.".php?cd=".$pesquisa."");
+        header("Location: ../cods/adm1/pages-menu/".$pagina.".php?cd=".$pesquisa."");
     }
     else{
-        //header("Location: ../cods/adm1/home_adm.php");
+        header("Location: ../cods/adm1/home_adm.php");
     }
 ?>
