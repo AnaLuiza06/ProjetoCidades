@@ -3,7 +3,7 @@
     include ("./conexao.php");
 
     $pagina = $_POST['pagina'];
-    $pesquisa = $_POST['pesquisa'];
+    $pesquisa = $_POST['pesquisar'];
 
     $consulta = mysqli_query($cn, "SELECT * FROM $pagina WHERE nome = '$pesquisa'");
 	$exibe = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
