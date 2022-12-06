@@ -5,7 +5,7 @@
     $pagina = $_POST['pagina'];
     $pesquisa = $_POST['pesquisar'];
 
-    $consulta = mysqli_query($cn, "SELECT * FROM $pagina WHERE nome = '$pesquisa'");
+    $consulta = mysqli_query($cn, "SELECT * FROM $pagina WHERE nome like '%$pesquisa%'");
 	$exibe = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
 
     print_r($exibe);
