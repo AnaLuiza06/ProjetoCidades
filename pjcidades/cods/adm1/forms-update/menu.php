@@ -6,12 +6,12 @@
 		<ul>
 			<li><a href="../home_adm.php">Home</a></li>
 			<li><a href="../pages-menu/lista-administradores.php">Administradores</a></li>
-			<li><a href="../pages-menu/lista-paises.php">Países</a></li>
-			<li><a href="../pages-menu/lista-regioes.php">Regiões</a></li>
-	        <li><a href="../pages-menu/lista-estados.php">Estados</a></li>
-			<li><a href="../pages-menu/lista-cidades.php">Cidades</a></li>
-			<li><a href="../pages-menu/lista-distritos.php">Distritos</a></li>
-	        <li><a href="../pages-menu/lista-pturisticos.php">Pontos Turísticos</a></li>
+			<li><a href="../pages-menu/lista-paises.php?cd=false">Países</a></li>
+			<li><a href="../pages-menu/lista-regioes.php?cd=false">Regiões</a></li>
+	        <li><a href="../pages-menu/lista-estados.php?cd=false">Estados</a></li>
+			<li><a href="../pages-menu/lista-cidades.php?cd=false">Cidades</a></li>
+			<li><a href="../pages-menu/lista-distritos.php?cd=false">Distritos</a></li>
+	        <li><a href="../pages-menu/lista-pturisticos.php?cd=false">Pontos Turísticos</a></li>
 		</ul>
 	    <div class="indentificacao-menu">
 			<h4>Nome</h4>
