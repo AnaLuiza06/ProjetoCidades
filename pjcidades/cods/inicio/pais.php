@@ -38,14 +38,14 @@
 		<section id="regioes">
 			<div class="carrossel-regioes">
 				<div class="btns-carrossel">
-					<button class="btn-carrossel"><</button>
-					<button class="btn-carrossel">></button>
+					<button class="btn-carrossel" onclick="btnAnterior()"><</button>
+					<button class="btn-carrossel" onclick="btnProximo()">></button>
 				</div>
-				<div class="container-carrossel">
+				<div class="container-carrossel" data-id="<?php echo count($exibe_pais);?>">
 					<?php
 						for ($i=0; $i < count($exibe_regiao) ; $i++) { 
 					?>
-						<a href="./regiao.php?id=<?php echo $exibe_regiao[$i]['id'];?>" class="card-carrosel active">
+						<a href="./regiao.php?id=<?php echo $exibe_regiao[$i]['id'];?>" class="card-carrosel active" data-id="<?php echo $i;?>">
 							<img src="<?php echo $exibe_regiao[$i]['imagem_inicio'];?>">
 							<div>
 								<p><?php echo $exibe_regiao[$i]['nome'];?></p>
@@ -181,52 +181,6 @@
 			</div>
 		</section>
 
-		<!-- <section id="comentarios">
-			<h2>Comentários</h2>
-			<div class="container-comentarios">
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosaj</p>
-					</div>
-				</div>
-
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
-			</div>
-		</section> -->
-
 	</main>
 
 		<footer>
@@ -235,6 +189,8 @@
 			</div>
 			<img src="https://www.queroviajarmais.com/wp-content/uploads/2020/08/rio-de-janeiro-fotos.jpg">
 		</footer>
+
+		<script src="../../js/carrossel.js"></script>
 
 </body>
 </html>

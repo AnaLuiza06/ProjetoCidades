@@ -19,9 +19,9 @@
 
 		<section class="pesquisar">
 			<h1>Tenha acesso a todos os cunteúdos do HelloWorld</h1>
-			<form>
+			<form method="post" action="../../conexao/pesquisa_adm.php">
 				<div>
-					<select>
+					<select name="pagina">
 						<option value="pais">País</option>
 						<option value="regiao">Região</option>
 						<option value="estado">Estado</option>

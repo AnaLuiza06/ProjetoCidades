@@ -16,6 +16,9 @@
 
 		 $consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade` WHERE `id` = '$id'");
          $exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
+
+		 $consulta_distrito = mysqli_query($cn, "SELECT * FROM `distrito` WHERE `id_cidade` = '$id'");
+         $exibe_distrito = mysqli_fetch_all($consulta_distrito, MYSQLI_ASSOC);
 	?>
 
 	<main>
@@ -30,33 +33,33 @@
 		</section>
 		
 		<section id="regioes">
-			<div class="carrossel-regioes">
-				<div class="btns-carrossel">
-					<button class="btn-carrossel"><</button>
-					<button class="btn-carrossel">></button>
+			<?php 
+
+				if(count($exibe_distrito) > 0){
+			?>
+				<div class="carrossel-regioes">
+					<div class="btns-carrossel">
+						<button class="btn-carrossel"><</button>
+						<button class="btn-carrossel">></button>
+					</div>
+					<div class="container-carrossel">
+						<?php
+							for ($i=0; $i < count($exibe_distrito) ; $i++) { 
+						?>
+							<a href="./cidade.php?id=<?php echo $exibe_distrito[$i]['id'];?>" class="card-carrosel active" data-id="<?php echo $i;?>">
+								<img src="<?php echo $exibe_distrito[$i]['imagem_inicio'];?>">
+								<div>
+									<p><?php echo $exibe_distrito[$i]['nome'];?></p>
+								</div>
+							</a>
+						<?php
+							}
+						?>
+					</div>
 				</div>
-				<div class="container-carrossel">
-					<a href="#" class="active">
-						<img src="https://static.todamateria.com.br/upload/54/17/541775e12aac4-mata-das-araucarias.jpg?auto_optimize=low">
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://magazine.zarpo.com.br/wp-content/uploads/2019/01/rio-de-janeiro_zarpo-1.jpg">
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://s3.static.brasilescola.uol.com.br/img/2014/08/pantanal-brasileiro.jpg">
-					</a>
-
-					<a href="#">
-						<img src="https://st4.depositphotos.com/1485837/22688/i/600/depositphotos_226887570-stock-photo-landscape-of-the-caatinga-in.jpg">
-					</a>
-
-					<a href="#">
-						<img src="https://s5.static.brasilescola.uol.com.br/be/2020/05/floresta-amazonica.jpg">
-					</a>
-				</div>
-			</div>
+			<?php
+				}
+			?>
 
 			<div class="text-regioes">
 				<div class="numeros">

@@ -179,7 +179,7 @@ tr{
 .card-body{
 	width: 350px;
 	height: 430px;
-	background-color: rgba(30, 30, 30, 0.79);
+	background-color: rgba(30, 30, 30, 0.39);
 	position: relative;
 	color: #fff;
 }
