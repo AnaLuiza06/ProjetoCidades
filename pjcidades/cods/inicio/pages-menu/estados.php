@@ -42,7 +42,6 @@
 
         <section class="container">
 			<div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-3">
                      <?php
                         for($i = 0; $i < count($exibe_estado); $i++){
 
@@ -50,7 +49,8 @@
                         $consulta_pais= mysqli_query($cn, "SELECT * FROM `pais` WHERE `id` = '$id_pais'");
                         $exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
                     ?>
-                        <div class="card" style="width: 18rem;">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card">
                             <img class="card-img-top" src="<?php echo $exibe_estado[$i]['imagem_inicio'];?>" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <div>
@@ -61,10 +61,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <?php
                         }
                     ?>
-                </div>
             </div>
         </section>
 
