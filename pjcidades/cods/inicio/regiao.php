@@ -16,6 +16,9 @@
 
 		 $consulta_regiao = mysqli_query($cn, "SELECT * FROM `regiao` WHERE `id` = '$id'");
          $exibe_regiao = mysqli_fetch_all($consulta_regiao, MYSQLI_ASSOC);
+
+		 $consulta_estado = mysqli_query($cn, "SELECT * FROM `estado` WHERE `id_regiao` = '$id'");
+         $exibe_estado = mysqli_fetch_all($consulta_estado, MYSQLI_ASSOC);
 	?>
 
 	<main>
@@ -36,25 +39,25 @@
 					<button class="btn-carrossel">></button>
 				</div>
 				<div class="container-carrossel">
-					<a href="#" class="active">
-						<img src="https://static.todamateria.com.br/upload/54/17/541775e12aac4-mata-das-araucarias.jpg?auto_optimize=low">
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://magazine.zarpo.com.br/wp-content/uploads/2019/01/rio-de-janeiro_zarpo-1.jpg">
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://s3.static.brasilescola.uol.com.br/img/2014/08/pantanal-brasileiro.jpg">
-					</a>
-
-					<a href="#">
-						<img src="https://st4.depositphotos.com/1485837/22688/i/600/depositphotos_226887570-stock-photo-landscape-of-the-caatinga-in.jpg">
-					</a>
-
-					<a href="#">
-						<img src="https://s5.static.brasilescola.uol.com.br/be/2020/05/floresta-amazonica.jpg">
-					</a>
+					<?php
+						for ($i=0; $i < count($exibe_estado); $i++) { 
+					?>
+						<?php 
+							if ($i < 3) {
+								$class = 'card-carrosel active';
+							} else {
+								$class = "card-carrosel";
+							}
+						?>
+						<a href="./estado.php?id=<?php echo $exibe_estado[$i]['id'];?>" class="<?= $class ?>" data-id="<?php echo $i;?>">
+							<img src="<?php echo $exibe_estado[$i]['imagem_inicio'];?>">
+							<div>
+								<p><?php echo $exibe_estado[$i]['nome'];?></p>
+							</div>
+						</a>
+					<?php
+						}
+					?>
 				</div>
 			</div>
 
@@ -133,96 +136,35 @@
 			<div class="container-turismo">
 				<h2>Pontos Turísticos</h2>
 				<div class="cards-turismo">
-					<a href="#">
-						<img src="https://a.cdn-hotels.com/gdcs/production95/d1124/49c122de-7b35-453d-83c9-ead69d9816a6.jpg">
-						<div class="text-turismo">
-							<h4>Pão de Açúcar</h4>
-							<p>Na Cidade Maravilhosa, a lista de pontos turísticos é grande, mas o conjunto de morros está dentre os mais estonteantes e visitados. Com 395 m de altura, o Pão de Açúcar é lindo de se ver mesmo de longe, mas também rende um passeio muito agradável de bondinho e uma visão 360° da cidade.</p>
-						</div>
-					</a>
+						<?php
+								$consulta_pturistico = mysqli_query($cn, "SELECT * FROM `pturistico` WHERE `id_regiao` = '$id'");
+								$exibe_pturistico = mysqli_fetch_all($consulta_pturistico, MYSQLI_ASSOC);
 
-					<a href="#" class="active">
-						<img src="https://a.cdn-hotels.com/gdcs/production95/d1124/49c122de-7b35-453d-83c9-ead69d9816a6.jpg">
-						<div class="text-turismo">
-							<h4>Pão de Açúcar</h4>
-							<p>Na Cidade Maravilhosa, a lista de pontos turísticos é grande, mas o conjunto de morros está dentre os mais estonteantes e visitados. Com 395 m de altura, o Pão de Açúcar é lindo de se ver mesmo de longe, mas também rende um passeio muito agradável de bondinho e uma visão 360° da cidade.</p>
-						</div>
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://a.cdn-hotels.com/gdcs/production95/d1124/49c122de-7b35-453d-83c9-ead69d9816a6.jpg">
-						<div class="text-turismo">
-							<h4>Pão de Açúcar</h4>
-							<p>Na Cidade Maravilhosa, a lista de pontos turísticos é grande, mas o conjunto de morros está dentre os mais estonteantes e visitados. Com 395 m de altura, o Pão de Açúcar é lindo de se ver mesmo de longe, mas também rende um passeio muito agradável de bondinho e uma visão 360° da cidade.</p>
-						</div>
-					</a>
-
-					<a href="#" class="active">
-						<img src="https://a.cdn-hotels.com/gdcs/production95/d1124/49c122de-7b35-453d-83c9-ead69d9816a6.jpg">
-						<div class="text-turismo">
-							<h4>Pão de Açúcar</h4>
-							<p>Na Cidade Maravilhosa, a lista de pontos turísticos é grande, mas o conjunto de morros está dentre os mais estonteantes e visitados. Com 395 m de altura, o Pão de Açúcar é lindo de se ver mesmo de longe, mas também rende um passeio muito agradável de bondinho e uma visão 360° da cidade.</p>
-						</div>
-					</a>
-
-					<a href="#">
-						<img src="https://a.cdn-hotels.com/gdcs/production95/d1124/49c122de-7b35-453d-83c9-ead69d9816a6.jpg">
-						<div class="text-turismo">
-							<h4>Pão de Açúcar</h4>
-							<p>Na Cidade Maravilhosa, a lista de pontos turísticos é grande, mas o conjunto de morros está dentre os mais estonteantes e visitados. Com 395 m de altura, o Pão de Açúcar é lindo de se ver mesmo de longe, mas também rende um passeio muito agradável de bondinho e uma visão 360° da cidade.</p>
-						</div>
-					</a>
+							for($i=0; $i<count($exibe_pturistico); $i++){
+								$id_cidade = $exibe_pturistico[$i]['id_cidade'];
+								$consulta_cidade = mysqli_query($cn, "SELECT * FROM `cidade` WHERE `id` = '$id_cidade'");
+								$exibe_cidade = mysqli_fetch_all($consulta_cidade, MYSQLI_ASSOC);
+						?>
+							<div class="">
+								<div class="card">
+									<img class="card-img-top" src="<?php echo $exibe_pturistico[$i]['imagem_inicio'];?>" alt="Imagem de capa do card">
+									<div class="card-body">
+										<div>
+											<h5><?php echo $exibe_pturistico[$i]['nome'];?></h5>
+											<h6><?php echo $exibe_cidade[0]['nome'];?></h6>
+											<button><a href="./pturistico.php?id=<?php echo $exibe_pturistico[$i]['id'];?>">Saber Mais</a></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php
+							}
+						?>
 				</div>
 			</div>
 
 			<div class="img-turismo">
 				<img src="<?php echo $exibe_regiao[0]['imagem_inicio'];?>">
-			</div>
-		</section>
-
-		<section id="comentarios">
-			<h2>Comentários</h2>
-			<div class="container-comentarios">
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosaj</p>
-					</div>
-				</div>
-
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
 			</div>
 		</section>
 	</main>

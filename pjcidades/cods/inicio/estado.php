@@ -42,6 +42,13 @@
 					<?php
 						for ($i=0; $i < count($exibe_cidade) ; $i++) { 
 					?>
+						<?php 
+							if ($i < 3) {
+								$class = 'card-carrosel active';
+							} else {
+								$class = "card-carrosel";
+							}
+						?>
 						<a href="./cidade.php?id=<?php echo $exibe_cidade[$i]['id'];?>" class="card-carrosel active" data-id="<?php echo $i;?>">
 							<img src="<?php echo $exibe_cidade[$i]['imagem_inicio'];?>">
 							<div>
@@ -171,52 +178,6 @@
 
 			<div class="img-turismo">
 				<img src="<?php echo $exibe_estado[0]['imagem_inicio'];?>">
-			</div>
-		</section>
-
-		<section id="comentarios">
-			<h2>Comentários</h2>
-			<div class="container-comentarios">
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosaj</p>
-					</div>
-				</div>
-
-				<div class="card-comentarios">
-					<div class="identifiacacao">
-						<img src="https://i.pinimg.com/474x/2f/3d/69/2f3d69d3189a0c47b931c0c0254fda21.jpg">
-						<div>
-							<h4>Nome</h4>
-							<p>nome@teste.com</p>
-						</div>
-					</div>
-
-					<div class="text-comentario">
-						<p>jewqjeqiprpwiejdpçasdjosajfó</p>
-					</div>
-				</div>
 			</div>
 		</section>
 
