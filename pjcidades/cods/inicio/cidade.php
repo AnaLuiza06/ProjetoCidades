@@ -55,7 +55,7 @@
 									$class = "card-carrosel";
 								}
 							?>
-							<a href="./cidade.php?id=<?php echo $exibe_distrito[$i]['id'];?>" class="card-carrosel active" data-id="<?php echo $i;?>">
+							<a href="./distrito.php?id=<?php echo $exibe_distrito[$i]['id'];?>" class="card-carrosel active" data-id="<?php echo $i;?>">
 								<img src="<?php echo $exibe_distrito[$i]['imagem_inicio'];?>">
 								<div>
 									<p><?php echo $exibe_distrito[$i]['nome'];?></p>
@@ -110,12 +110,12 @@
 			<div class="container-geografia">
 				<h2>Geografia</h2>
 				<div class="cards-geografia">
-					<div class="border">
+					<div>
 						<h3>Clima</h3>
 						<p><?php echo $exibe_cidade[0]['text_clima'];?></p>
 					</div>
 
-					<div class="border">
+					<div>
 						<h3>Vegetação</h3>
 						<p><?php echo $exibe_cidade[0]['text_vegetacao'];?></p>
 					</div>

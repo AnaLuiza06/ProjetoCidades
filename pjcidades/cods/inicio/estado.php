@@ -103,12 +103,12 @@
 			<div class="container-geografia">
 				<h2>Geografia</h2>
 				<div class="cards-geografia">
-					<div class="border">
+					<div>
 						<h3>Clima</h3>
 						<p>A<?php echo $exibe_estado[0]['text_clima'];?></p>
 					</div>
 
-					<div class="border">
+					<div>
 						<h3>Vegetação</h3>
 						<p><?php echo $exibe_estado[0]['text_vegetacao'];?></p>
 					</div>
