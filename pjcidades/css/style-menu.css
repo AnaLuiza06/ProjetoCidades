@@ -52,7 +52,7 @@ ul{
 .numeros{
 	bottom: 0;
 	left: 0;
-	height: 200px;
+	height: 25%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -60,7 +60,7 @@ ul{
 	color: #fff;
 }
 .numeros div{
-	width: 200px;
+	width: 100%;
 	text-align: center;
 }
 .pesquisar{
@@ -69,6 +69,7 @@ ul{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	height: 75%;
 }
 .pesquisar h1{
 	text-align: center;

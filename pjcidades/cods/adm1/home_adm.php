@@ -18,20 +18,22 @@
 		<img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg" class="img-fundo">
 
 		<section class="pesquisar">
-			<h1>Tenha acesso a todos os cunteúdos do HelloWorld</h1>
-			<form method="post" action="../../conexao/pesquisa_adm.php">
-				<div>
-					<select name="pagina">
-						<option value="pais">País</option>
-						<option value="regiao">Região</option>
-						<option value="estado">Estado</option>
-						<option value="cidade">Cidade</option>
-						<option value="pturistico">Ponto Turístico</option>
-					</select>
-					<input type="test" name="perquisar">
-				</div>
-				<button type="submit">Pesquisar</button>
-			</form>
+			<div>
+				<h1>Tenha acesso a todos os cunteúdos do HelloWorld</h1>
+				<form method="post" action="../../conexao/pesquisa_adm.php">
+					<div>
+						<select name="pagina">
+							<option value="pais">País</option>
+							<option value="regiao">Região</option>
+							<option value="estado">Estado</option>
+							<option value="cidade">Cidade</option>
+							<option value="pturistico">Ponto Turístico</option>
+						</select>
+						<input type="test" name="perquisar">
+					</div>
+					<button type="submit">Pesquisar</button>
+				</form>
+			</div>
 		</section>
 
 		<section class="numeros">
