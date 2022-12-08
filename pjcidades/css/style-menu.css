@@ -59,6 +59,11 @@ ul{
 	align-items: center;
 	background-color: #1E1E1E;
 	color: #fff;
+	gap: 40px;
+	width: 100%;
+}
+.numeros_adm div{
+	text-align: center;
 }
 .numeros div{
 	width: 100%;
@@ -71,6 +76,10 @@ ul{
 	display: flex;
 	flex-direction: column;
 	height: 75%;
+}
+.pesquisar div{
+	display: flex;
+	flex-direction: column;
 }
 .pesquisar h1{
 	text-align: center;
