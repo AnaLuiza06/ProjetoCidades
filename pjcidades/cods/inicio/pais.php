@@ -41,7 +41,7 @@
 					<button class="btn-carrossel" onclick="mostrarAnterior()"><</button>
 					<button class="btn-carrossel" onclick="mostrarProximo()">></button>
 				</div>
-				<div class="container-carrossel" data-count="<?php echo count($exibe_regiao);?>">
+				<div class="container-carrossel" data-id="<?php echo count($exibe_regiao);?>">
 					<?php
 						for ($i=0; $i < count($exibe_regiao); $i++) { 
 					?>

@@ -18,7 +18,7 @@
 		function mostrarProximo(){
 
 			const el = document.querySelectorAll(".container-carrossel")
-			const quantidade = parseInt(el.getAttribute("data-count")) - 1
+			const quantidade = parseInt(el.getAttribute("data-id"))
 
 			const cardsActives = document.querySelectorAll(".active")
 			const cardp4 = cardsActives[3].getAttribute("data-id")
