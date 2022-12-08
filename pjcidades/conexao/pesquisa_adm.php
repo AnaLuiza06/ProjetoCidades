@@ -8,8 +8,6 @@
     $consulta = mysqli_query($cn, "SELECT * FROM $pagina WHERE nome like '%$pesquisa%'");
 	$exibe = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
 
-    print_r($exibe);
-
     if(count($exibe) > 0){
         header("Location: ../cods/adm1/pages-menu/".$pagina.".php?cd=".$pesquisa."");
     }
