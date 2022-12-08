@@ -36,7 +36,7 @@
 			</div>
 		</section>
 
-		<section class="numeros">
+		<section class="numeros_adm">
 			<div>
 				<?php
 					$consulta_pais = mysqli_query($cn, "SELECT * FROM `pais`");
