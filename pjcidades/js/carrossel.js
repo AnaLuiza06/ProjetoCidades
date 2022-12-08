@@ -1,14 +1,35 @@
-const cardsCarrossel = document.querySelector(".container-carrossel")
-const cardsQuantidade = parseInt(cardsCarrossel.getAttribute("data-count"))
+		function mostrarAnterior(){
+			const elant = document.querySelectorAll(".card-regioes")
 
-function btnProximo(){
-    const cards = querySelectorAll(".card-carrosel")
-    const cardsActives = cards.querySelectorAll(".active")
-    const cardsId = parseInt(cardsActives.getAttribute("data-id"))
-    
+			const cardsActive = document.querySelectorAll(".active")
+			const cardp1 = cardsActive[0].getAttribute("data-id");
 
-}
+			if (cardp1 > 1) {
 
-function btnAnterior(){
+			// remover card
+				cardsActive[3].classList.remove('active')
 
-}
+			// adicionar card
+				const novocar = parseInt(cardp1) - 2
+				elant[novocar].classList.add('active')
+			}
+		}
+
+		function mostrarProximo(){
+
+			const el = document.querySelectorAll(".container-carrossel")
+			const quantidade = parseInt(el.getAttribute("data-count")) - 1
+
+			const cardsActives = document.querySelectorAll(".active")
+			const cardp4 = cardsActives[3].getAttribute("data-id")
+
+			if (cardp4 < quantidade) {
+
+			// remover card
+				cardsActives[0].classList.remove('active')
+
+			// adicionar card
+				const novocard = parseInt(cardp4)
+				el[novocard].classList.add('active')
+			}
+		}

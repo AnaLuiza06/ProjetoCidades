@@ -36,10 +36,10 @@
 		</section>
 		
 		<section id="regioes">
-			<div class="carrossel-regioes">
+			<div class="carrossel-regioes" >
 				<div class="btns-carrossel">
-					<button class="btn-carrossel" onclick="btnAnterior()"><</button>
-					<button class="btn-carrossel" onclick="btnProximo()">></button>
+					<button class="btn-carrossel" onclick="mostrarAnterior()"><</button>
+					<button class="btn-carrossel" onclick="mostrarProximo()">></button>
 				</div>
 				<div class="container-carrossel" data-count="<?php echo count($exibe_regiao);?>">
 					<?php
