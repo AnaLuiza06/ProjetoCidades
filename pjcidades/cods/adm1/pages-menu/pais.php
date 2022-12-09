@@ -12,8 +12,9 @@
 
 	<?php
 		include ("./menu.php");
-
         include ("./conexao.php");
+
+        $pesquisa = $_GET['cd'];
 
         $consulta_pais = mysqli_query($cn, "SELECT * FROM `pais`");
 	    $exibe_pais = mysqli_fetch_all($consulta_pais, MYSQLI_ASSOC);
@@ -33,6 +34,40 @@
         </section>
 
         <section class="container">
+            <div class="card-pesquisa">
+                <?php  
+                    if ($pesquisa != "false") {
+                        
+                        $consulta_pesquisa = mysqli_query($cn, "SELECT * FROM `pais` WHERE nome = '$pesquisa'");
+                        $exibe_pesquisa = mysqli_fetch_all($consulta_pesquisa, MYSQLI_ASSOC);
+
+                        for ($i=0; $i < count($exibe_pesquisa); $i++) { 
+                        
+                ?>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="card">
+                                    <img class="card-img-top" src="<?php echo $exibe_pesquisa[$i]['imagem_inicio']?>" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5><?php echo $exibe_pesquisa[$i]['nome']?></h5>
+                                        <p class="card-text">Nome Oficial: <?php echo $exibe_pesquisa[$i]['nome_oficial']?></p>
+                                        <p class="card-text">Localização: <?php echo $exibe_pesquisa[$i]['localizacao']?></p>
+                                        <div class="btns-cards">
+                                            <button>
+                                                <a href="../forms-update/up-pais.php?id=<?php echo $exibe_pesquisa[$i]['id'];?>">Alterar</a>
+                                            </button>
+                                            <button>
+                                                <a href="../../../conexao/deleta/del-pais.php?id=<?php echo $exibe_pesquisa[$i]['id']?>">Deletar</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                <?php
+                        }
+                    }
+
+                ?>
+            </div>
 			<div class="row">
 
                 <?php
@@ -40,7 +75,7 @@
 
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img class="card-img-top" src="<?php echo $exibe_pais[$i]['imagem_inicio']?>" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <h5><?php echo $exibe_pais[$i]['nome']?></h5>
@@ -51,7 +86,7 @@
                                         <a href="../forms-update/up-pais.php?id=<?php echo $exibe_pais[$i]['id'];?>">Alterar</a>
                                     </button>
                                     <button>
-                                        <a href="#">Deletar</a>
+                                        <a href="../../../conexao/deleta/del-pais.php?id=<?php echo $exibe_pais[$i]['id']?>">Deletar</a>
                                     </button>
                                 </div>
                             </div>
