@@ -5,12 +5,11 @@
     $pagina = $_POST['pagina'];
     $pesquisa = $_POST['perquisar'];
 
-    $consulta = mysqli_query($cn, "SELECT * FROM $pagina WHERE nome like '$pesquisa'");
+    $consulta = mysqli_query($cn, "SELECT * FROM $pagina WHERE `nome` = '$pesquisa'");
 	$exibe = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
 
     if(count($exibe) > 0){
-        print_r($pagina);
-        print_r($pesquisa);
+        print_r($exibe);
         //header("Location: ../cods/adm1/pages-menu/".$pagina.".php?cd=".$pesquisa."");
     }
     else{
