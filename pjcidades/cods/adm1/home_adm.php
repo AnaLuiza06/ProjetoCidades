@@ -27,6 +27,7 @@
 							<option value="regiao">Região</option>
 							<option value="estado">Estado</option>
 							<option value="cidade">Cidade</option>
+							<option value="distrito">Distrito</option>
 							<option value="pturistico">Ponto Turístico</option>
 						</select>
 						<input type="test" name="perquisar">
