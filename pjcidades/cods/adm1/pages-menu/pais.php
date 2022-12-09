@@ -34,7 +34,10 @@
         </section>
 
         <section class="container">
-            <div class="card-pesquisa">
+            
+			<div class="row">
+
+                <div class="card-pesquisa">
                 <?php  
                     if ($pesquisa != "false") {
                         
@@ -68,8 +71,7 @@
 
                 ?>
             </div>
-			<div class="row">
-
+            
                 <?php
                     for($i = 0; $i < count($exibe_pais); $i++){
 
