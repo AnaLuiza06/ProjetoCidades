@@ -50,17 +50,16 @@ ul{
 	z-index: -2;
 }
 .numeros_adm{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 25%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #1E1E1E;
-	color: #fff;
-	gap: 40px;
-	width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    gap: 40px;
+    color: #fff;
+    background: #1E1E1E;
+    align-items: center;
 }
 .numeros_adm div{
 	text-align: center;
@@ -79,6 +78,7 @@ ul{
 .pesquisar div{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 .pesquisar h1{
 	text-align: center;
