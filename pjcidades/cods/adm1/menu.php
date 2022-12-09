@@ -5,7 +5,7 @@
 		</div>
 		<ul>
 			<li><a href="home_adm.php">Home</a></li>
-			<li><a href="pages-menu/administrador.php?cd=false">Administradores</a></li>
+			<li><a href="pages-menu/administradores.php?cd=false">Administradores</a></li>
 			<li><a href="pages-menu/pais.php?cd=false">Países</a></li>
 			<li><a href="pages-menu/regiao.php?cd=false">Regiões</a></li>
 	        <li><a href="pages-menu/estado.php?cd=false">Estados</a></li>

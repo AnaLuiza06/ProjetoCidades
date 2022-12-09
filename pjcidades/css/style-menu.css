@@ -79,6 +79,8 @@ ul{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-top: 200px;
+	color: #fff;
 }
 .pesquisar h1{
 	text-align: center;
@@ -86,6 +88,9 @@ ul{
 	margin: auto;
 }
 .pesquisar form{
+	margin: auto;
+}
+.pesquisar form button{
 	margin: auto;
 }
 .pesquisar form div{

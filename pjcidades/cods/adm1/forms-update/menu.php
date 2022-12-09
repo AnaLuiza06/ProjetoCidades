@@ -5,13 +5,13 @@
 		</div>
 		<ul>
 			<li><a href="../home_adm.php">Home</a></li>
-			<li><a href="../pages-menu/lista-administradores.php">Administradores</a></li>
-			<li><a href="../pages-menu/lista-paises.php?cd=false">Países</a></li>
-			<li><a href="../pages-menu/lista-regioes.php?cd=false">Regiões</a></li>
-	        <li><a href="../pages-menu/lista-estados.php?cd=false">Estados</a></li>
-			<li><a href="../pages-menu/lista-cidades.php?cd=false">Cidades</a></li>
-			<li><a href="../pages-menu/lista-distritos.php?cd=false">Distritos</a></li>
-	        <li><a href="../pages-menu/lista-pturisticos.php?cd=false">Pontos Turísticos</a></li>
+			<li><a href="../pages-menu/administradores.php">Administradores</a></li>
+			<li><a href="../pages-menu/pais.php?cd=false">Países</a></li>
+			<li><a href="../pages-menu/regiao.php?cd=false">Regiões</a></li>
+	        <li><a href="../pages-menu/estado.php?cd=false">Estados</a></li>
+			<li><a href="../pages-menu/cidade.php?cd=false">Cidades</a></li>
+			<li><a href="../pages-menu/distrito.php?cd=false">Distritos</a></li>
+	        <li><a href="../pages-menu/pturistico.php?cd=false">Pontos Turísticos</a></li>
 		</ul>
 	    <div class="indentificacao-menu">
 			<h4>Nome</h4>
