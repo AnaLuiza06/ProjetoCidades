@@ -191,5 +191,7 @@
 			<img src="https://www.queroviajarmais.com/wp-content/uploads/2020/08/rio-de-janeiro-fotos.jpg">
 		</footer>
 
+		<script src="../../js/carrossel.js"></script>
+
 </body>
 </html>
