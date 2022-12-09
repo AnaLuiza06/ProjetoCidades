@@ -10,7 +10,7 @@
 
     if(count($exibe) > 0){
         print_r($exibe);
-        print_r($pesquisa);
+        print_r($consulta);
         //header("Location: ../cods/adm1/pages-menu/".$pagina.".php?cd=".$pesquisa."");
     }
     else{
